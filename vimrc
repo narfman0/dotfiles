@@ -113,3 +113,7 @@ set ttymouse=xterm2
 set clipboard=unnamed
 "Make obvious bar at column 80 to avoid overly long lines
 set colorcolumn=80
+highlight UnwanttedTab ctermbg=red guibg=darkred
+highlight TrailSpace guibg=red ctermbg=darkred
+match UnwanttedTab /\t/
+match TrailSpace / \+$/
