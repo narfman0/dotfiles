@@ -117,3 +117,8 @@ highlight UnwanttedTab ctermbg=red guibg=darkred
 highlight TrailSpace guibg=red ctermbg=darkred
 match UnwanttedTab /\t/
 match TrailSpace / \+$/
+
+"visual mode system clipboard copy
+vnoremap <C-c> "+y
+"insert mode system clipboard paste
+inoremap <C-v> <ESC>"+pa
