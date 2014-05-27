@@ -1,15 +1,25 @@
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
+let iCanHazVundle=1
+let vundle_readme=expand('~/.vim/bundle/vundle/README.md')
+if !filereadable(vundle_readme)
+    echo "Installing Vundle.."
+    echo ""
+    silent !mkdir -p ~/.vim/bundle
+    silent !git clone https://github.com/gmarik/vundle ~/.vim/bundle/vundle
+    let iCanHazVundle=0
+endif
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
-"git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-Plugin 'gmarik/Vundle.vim'
-"git clone https://github.com/Valloric/YouCompleteMe.git
-"cd ~/.vim/bundle/YouCompleteMe
-"./install.sh --clang-completer
+Bundle 'gmarik/vundle'
+Bundle 'scrooloose/syntastic'
 Bundle 'Valloric/YouCompleteMe'
-"git clone https://github.com/scrooloose/syntastic.git
+if iCanHazVundle == 0
+    echo "Installing Bundles..."
+    :BundleInstall
+    echo "Finished installing bundles"
+endif
 call vundle#end()            " required
 
 filetype plugin indent on    " required
