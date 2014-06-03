@@ -117,7 +117,7 @@ set noswapfile
 "Auto write changes and source vimrc immediately
 autocmd! bufwritepost .vimrc source %
 "set ctags paths
-set tags=./tags,tags,~/workspace/moreau/devel/cms_dev/src
+set tags=./tags,tags,~/workspace/moreau/devel/cms_dev/tags
 set ttymouse=xterm2
 "Make clipboard copy verbatim instead of commenting forever if it hits one
 set clipboard=unnamed
@@ -132,3 +132,13 @@ match TrailSpace / \+$/
 vnoremap <C-c> "+y
 "insert mode system clipboard paste
 inoremap <C-v> <ESC>"+pa
+
+"disable arrow keys, hjkl or bust, or so the internet wants me to believe
+inoremap  <Up>     <NOP>
+inoremap  <Down>   <NOP>
+inoremap  <Left>   <NOP>
+inoremap  <Right>  <NOP>
+noremap   <Up>     <NOP>
+noremap   <Down>   <NOP>
+noremap   <Left>   <NOP>
+noremap   <Right>  <NOP>
