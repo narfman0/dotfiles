@@ -1,4 +1,7 @@
-export PATH=/usr/local/sbin:/usr/local/bin:$PATH
+if [ -f ~/.bashrc ]; then
+	. ~/.bashrc
+fi
+export PATH=$HOME/.local/bin:$HOME/bin:/usr/local/sbin:/usr/local/bin:$PATH
 alias ll='ls -FGlAhp'
 alias rg='grep -r --exclude-dir *.git --exclude *tags'
 alias vu='USER=jrobison vagrant up && vagrant ssh'
