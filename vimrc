@@ -24,7 +24,7 @@ call vundle#end()            " required
 
 filetype plugin indent on    " required
 " To ignore plugin indent changes, instead use:
-"filetype plugin on
+filetype plugin on
 
 syntax on
 
@@ -142,3 +142,13 @@ noremap   <Up>     <NOP>
 noremap   <Down>   <NOP>
 noremap   <Left>   <NOP>
 noremap   <Right>  <NOP>
+
+syn region  djangotagmarkers start="{{" end="}}"
+syn region  djangovariablemarkers start="{%" end="%}"
+command! -nargs=+ HiLink hi def link <args>
+HiLink djangotagmarkers PreProc
+HiLink djangovariablemarkers PreProc
+delcommand HiLink
+
+let g:syntastic_python_checkers = ['pylint']
+let g:syntastic_python_pylint_args = "--load-plugins pylint_django"
