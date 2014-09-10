@@ -15,6 +15,7 @@ call vundle#begin()
 Bundle 'gmarik/vundle'
 Bundle 'scrooloose/syntastic'
 Bundle 'Valloric/YouCompleteMe'
+Bundle 'kien/ctrlp.vim'
 if iCanHazVundle == 0
     echo "Installing Bundles..."
     :BundleInstall
@@ -143,6 +144,10 @@ noremap   <Down>   <NOP>
 noremap   <Left>   <NOP>
 noremap   <Right>  <NOP>
 
+set list
+"backup chars to play with: → ·
+set listchars=tab:>\ ,trail:·,nbsp:·
+
 syn region  djangotagmarkers start="{{" end="}}"
 syn region  djangovariablemarkers start="{%" end="%}"
 command! -nargs=+ HiLink hi def link <args>
@@ -152,3 +157,9 @@ delcommand HiLink
 
 let g:syntastic_python_checkers = ['pylint']
 let g:syntastic_python_pylint_args = "--load-plugins pylint_django"
+
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_cmd = 'CtrlP'
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip     " MacOSX/Linux
+set wildignore+=*\\tmp\\*,*.swp,*.zip,*.exe  " Windows
+let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
