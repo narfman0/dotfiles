@@ -145,6 +145,7 @@ noremap   <Left>   <NOP>
 noremap   <Right>  <NOP>
 
 nnoremap <C-n> :set relativenumber!<cr>
+set relativenumber
 
 set list
 "backup chars to play with: → ·
