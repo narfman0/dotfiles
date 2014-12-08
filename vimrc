@@ -144,15 +144,7 @@ noremap   <Down>   <NOP>
 noremap   <Left>   <NOP>
 noremap   <Right>  <NOP>
 
-"allow relative or abs line numbering with ctrl-n
-function! NumberToggle()
-  if(&relativenumber == 1)
-    set number
-  else
-    set relativenumber
-  endif
-endfunc
-nnoremap <C-n> :call NumberToggle()<cr>
+nnoremap <C-n> :set relativenumber!<cr>
 
 set list
 "backup chars to play with: → ·
