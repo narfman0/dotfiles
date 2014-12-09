@@ -10,6 +10,6 @@ alias gr='git fetch; git rebase -i origin/master'
 alias striphtml="sed 's|<[^>]*>||g'"
 export CLICOLOR=1
 export LSCOLORS=ExFxBxDxCxegedabagacad
-export PS1="\u@\h \w> "
+export PS1="[\u@\h \w]$ "
 export EDITOR=vim
 export NSS_SSL_CBC_RANDOM_IV=0

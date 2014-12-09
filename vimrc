@@ -2,15 +2,15 @@ set nocompatible              " be iMproved, required
 filetype off                  " required
 
 let iCanHazVundle=1
-let vundle_readme=expand('~/.vim/bundle/vundle/README.md')
+let vundle_readme=expand('~/.vim/bundle/vundle.vim/README.md')
 if !filereadable(vundle_readme)
     echo "Installing Vundle.."
     echo ""
     silent !mkdir -p ~/.vim/bundle
-    silent !git clone https://github.com/gmarik/vundle ~/.vim/bundle/vundle
+    silent !git clone https://github.com/gmarik/vundle ~/.vim/bundle/vundle.vim
     let iCanHazVundle=0
 endif
-set rtp+=~/.vim/bundle/Vundle.vim
+set rtp+=~/.vim/bundle/vundle.vim
 call vundle#begin()
 Bundle 'gmarik/vundle'
 Bundle 'scrooloose/syntastic'
