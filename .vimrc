@@ -122,8 +122,8 @@ set tags=./tags,tags,~/workspace/moreau/devel/cms_dev/tags
 set ttymouse=xterm2
 "Make clipboard copy verbatim instead of commenting forever if it hits one
 set clipboard=unnamed
-"Make obvious bar at column 80 to avoid overly long lines
-set colorcolumn=80
+"Make obvious bar at column 110 to avoid overly long lines
+set colorcolumn=110
 highlight UnwanttedTab ctermbg=red guibg=darkred
 highlight TrailSpace guibg=red ctermbg=darkred
 match UnwanttedTab /\t/
@@ -158,8 +158,18 @@ HiLink djangotagmarkers PreProc
 HiLink djangovariablemarkers PreProc
 delcommand HiLink
 
-let g:syntastic_python_checkers = ['pylint']
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+
+let g:syntastic_python_checkers = ['pylint', 'flake8']
 let g:syntastic_python_pylint_args = "--load-plugins pylint_django"
+let g:syntastic_javascript_checkers = ['jshint']
 
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
