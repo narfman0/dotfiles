@@ -168,9 +168,8 @@ let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 
 let g:syntastic_python_checkers = ['pylint', 'flake8']
-let g:syntastic_python_pylint_args = "--load-plugins pylint_django"
+let g:syntastic_python_pylint_args = "--load-plugins pylint_django --max-line-length=110 --disable=F0401"
 let g:syntastic_python_flake8_args="--max-line-length=110"
-let g:syntastic_python_pylint_args="--max-line-length=110"
 let g:syntastic_javascript_checkers = ['jshint']
 
 let g:ctrlp_map = '<c-p>'
