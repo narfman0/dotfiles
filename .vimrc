@@ -15,7 +15,7 @@ call vundle#begin()
 Bundle 'gmarik/vundle'
 Bundle 'scrooloose/syntastic'
 Bundle 'Valloric/YouCompleteMe'
-Bundle 'kien/ctrlp.vim'
+Bundle 'ctrlpvim/ctrlp.vim'
 if iCanHazVundle == 0
     echo "Installing Bundles..."
     :BundleInstall
@@ -146,6 +146,8 @@ noremap   <Right>  <NOP>
 
 nnoremap <C-n> :set relativenumber!<cr>
 set relativenumber
+
+map <C-u> :SyntasticToggleMode<cr>
 
 set list
 "backup chars to play with: → ·
