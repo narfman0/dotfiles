@@ -9,3 +9,4 @@ alias ll='ls -FGlAhp'
 alias rf='find . 2> /dev/null | grep'
 alias rg='grep -r --exclude-dir *.git --exclude *tags'
 alias striphtml="sed 's|<[^>]*>||g'"
+alias rm='trash'
