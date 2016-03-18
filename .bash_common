@@ -7,5 +7,4 @@ export PS1="[\u@\h \w]$ "
 alias gr='git fetch; git rebase -i origin/master'
 alias ll='ls -FGlAhp'
 alias rf='find . 2> /dev/null | grep'
-alias rg='grep -r --exclude-dir *.git --exclude *tags'
 alias striphtml="sed 's|<[^>]*>||g'"
