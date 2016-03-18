@@ -8,3 +8,4 @@ alias gr='git fetch; git rebase -i origin/master'
 alias ll='ls -FGlAhp'
 alias rf='find . 2> /dev/null | grep'
 alias striphtml="sed 's|<[^>]*>||g'"
+alias rm='trash'
