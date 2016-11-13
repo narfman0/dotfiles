@@ -1,3 +1,4 @@
+#!/bin/bash
 export CLICOLOR=1
 export EDITOR=vim
 export LSCOLORS=ExFxBxDxCxegedabagacad
@@ -12,3 +13,4 @@ if [ -x "$(command -v trash)" ]; then
     alias rm='trash'
 fi
 alias pt='python -m unittest discover'
+source $HOME/.autoenv/activate.sh
