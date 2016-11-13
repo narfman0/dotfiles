@@ -16,6 +16,6 @@ fi
 function cd(){
     builtin cd "${*}"
     if [ -e ".env" ]; then
-        sh .env
+        . .env
     fi
 }
