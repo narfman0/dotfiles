@@ -9,8 +9,13 @@ alias gr='git fetch; git rebase -i origin/master'
 alias ll='ls -FGlAhp'
 alias rf='find . 2> /dev/null | grep'
 alias striphtml="sed 's|<[^>]*>||g'"
+alias pt='python -m unittest discover'
 if [ -x "$(command -v trash)" ]; then
     alias rm='trash'
 fi
-alias pt='python -m unittest discover'
-source $HOME/.autoenv/activate.sh
+function cd(){
+    builtin cd "${*}"
+    if [ -e ".env" ]; then
+        sh .env
+    fi
+}
