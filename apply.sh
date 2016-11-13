@@ -11,4 +11,7 @@ ln $SCRIPTPATH/.vimrc
 mv .conkyrc .conkyrc.old
 ln $SCRIPTPATH/.conkyrc
 
+mkdir -p .tmux
+ln $SCRIPTPATH/.tmux.conf
+
 popd
