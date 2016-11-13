@@ -5,13 +5,16 @@ pushd ~
 
 echo . $SCRIPTPATH/.bash_common >> .bashrc
 
+mkdir -p .local/bin
+
 mv .vimrc .vimrc.old
-ln $SCRIPTPATH/.vimrc
+ln -fs $SCRIPTPATH/.vimrc
 
 mv .conkyrc .conkyrc.old
-ln $SCRIPTPATH/.conkyrc
+ln -fs $SCRIPTPATH/.conkyrc
 
 mkdir -p .tmux
-ln $SCRIPTPATH/.tmux.conf
+ln -fs $SCRIPTPATH/.tmux.conf
+ln -fs $SCRIPTPATH/.tmuxdev -T .local/bin/tmuxdev
 
 popd
