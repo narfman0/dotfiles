@@ -3,7 +3,9 @@ export SCRIPTPATH=$( cd $(dirname $0) ; pwd -P )
 echo 'Linking scripts to ' $SCRIPTPATH
 pushd ~
 
-echo . $SCRIPTPATH/.bash_common >> .bashrc
+if ! grep bash_common .bashrc; then
+  echo . $SCRIPTPATH/.bash_common >> .bashrc
+fi
 
 mkdir -p .local/bin
 
