@@ -19,4 +19,6 @@ mkdir -p .tmux
 ln -fs $SCRIPTPATH/.tmux.conf
 ln -fs $SCRIPTPATH/.tmuxdev -T .local/bin/tmuxdev
 
+ln -fs $SCRIPTPATH/.irssi
+
 popd
