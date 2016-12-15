@@ -1,6 +1,0 @@
-Some system, editor, or other configuration file I want shared or otherwise
-accessible
-
-To apply all of these files at once, execute the apply.sh script. It will back
-up the current scripts and symbolically link to the scripts included in this
-directory.

@@ -14,10 +14,12 @@ mv .conkyrc .conkyrc.old
 ln -fs $SCRIPTPATH/.conkyrc
 
 mkdir -p .tmux
+mv .tmux.conf .tmux.conf.old
 ln -fs $SCRIPTPATH/.tmux.conf
 
 echo -n "What is your ZNC password (for irssi)? "
 read -s znc_pass
+mv ~/.irssi ~/.irssi.old
 mkdir -p ~/.irssi
 ln -fs $SCRIPTPATH/.irssi/scripts ~/.irssi/
 ln -fs $SCRIPTPATH/.irssi/weed.theme ~/.irssi/
