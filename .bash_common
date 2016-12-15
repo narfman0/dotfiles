@@ -13,6 +13,19 @@ alias pt='python -m unittest discover'
 if [ -x "$(command -v trash)" ]; then
     alias rm='trash'
 fi
+ti() {
+    tmux new-session -d irssi
+    tmux -2 attach-session -d
+}
+td() {
+    tmux new-session -d 'vim .'
+    tmux split-window -v
+    tmux send-keys 'cd .' Enter
+    tmux split-window -h
+    tmux send-keys 'cd .' Enter
+    tmux resize-p -y 10
+    tmux -2 attach-session -d
+}
 function cd(){
     builtin cd "${*}"
     if [ -e ".env" ]; then

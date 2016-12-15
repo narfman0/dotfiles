@@ -7,8 +7,6 @@ if ! grep bash_common .bashrc; then
   echo . $SCRIPTPATH/.bash_common >> .bashrc
 fi
 
-mkdir -p .local/bin
-
 mv .vimrc .vimrc.old
 ln -fs $SCRIPTPATH/.vimrc
 
@@ -17,7 +15,6 @@ ln -fs $SCRIPTPATH/.conkyrc
 
 mkdir -p .tmux
 ln -fs $SCRIPTPATH/.tmux.conf
-ln -fs $SCRIPTPATH/.tmuxdev -T .local/bin/tmuxdev
 
 echo -n "What is your ZNC password (for irssi)? "
 read -s znc_pass

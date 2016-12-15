@@ -1,9 +1,0 @@
-#!/bin/sh
-tmux new-session -d 'vim .'
-#tmux split-window -v 'ipython'
-tmux split-window -v
-tmux send-keys "cd ." Enter
-tmux split-window -h
-tmux send-keys "cd ." Enter
-tmux resize-p -y 10
-tmux -2 attach-session -d
