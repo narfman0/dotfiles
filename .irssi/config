@@ -20,6 +20,7 @@ servers = (
     chatnet = "cmg_np_mobile";
     port = "6697";
     use_ssl = "yes";
+    autoconnect = "yes";
     password = "narfman0/cmg-np-mobile-slack:ZNC_PASS";
   },
   {
@@ -27,6 +28,7 @@ servers = (
     chatnet = "zappa";
     port = "6697";
     use_ssl = "yes";
+    autoconnect = "yes";
     password = "narfman0/zappaslack:ZNC_PASS";
   }
 );
@@ -49,8 +51,7 @@ channels = (
   { name = "#general"; chatnet = "cmg_np_mobile"; autojoin = "Yes"; },
   { name = "#random"; chatnet = "cmg_np_mobile"; autojoin = "Yes"; },
   { name = "#tech"; chatnet = "cmg_np_mobile"; autojoin = "Yes"; },
-  { name = "#dev_ux_private"; chatnet = "cmg_np_mobile"; autojoin = "Yes";
-  },
+  { name = "#dev_ux_private"; chatnet = "cmg_np_mobile"; autojoin = "Yes";},
 
   { name = "#general-chat"; chatnet = "757dev"; autojoin = "Yes"; },
   { name = "#random"; chatnet = "757dev"; autojoin = "Yes"; },
