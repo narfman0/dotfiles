@@ -4,12 +4,12 @@ use vars qw($VERSION %IRSSI);
 $VERSION = "2";
 %IRSSI = (
     authors     => "Timo Sirainen, Ian Peters, David Leadbeater",
-    contact => "tss\@iki.fi", 
+    contact	=> "tss\@iki.fi", 
     name        => "Nick Color",
     description => "assign a different color for each nick",
-    license => "Public Domain",
-    url   => "http://irssi.org/",
-    changed => "Sun 15 Jun 19:10:44 BST 2014",
+    license	=> "Public Domain",
+    url		=> "http://irssi.org/",
+    changed	=> "Sun 15 Jun 19:10:44 BST 2014",
 );
 
 # Settings:
@@ -93,7 +93,7 @@ sub sig_public {
   }
 
   $color = sprintf "\003%02d", $color;
-  $server->command('/^format pubmsg {pubmsgnick $2 {pubnick '.chr(3).$color.'$[-10]0}}$1');
+  $server->command('/^format pubmsg {pubmsgnick $2 {pubnick ' . $color . '$0}}$1');
 }
 
 sub cmd_color {
@@ -126,7 +126,7 @@ sub cmd_color {
     Irssi::print ("\nSaved Colors:");
     foreach my $nick (keys %saved_colors) {
       Irssi::print (chr (3) . "$saved_colors{$nick}$nick" .
-        chr (3) . "1 ($saved_colors{$nick})");
+		    chr (3) . "1 ($saved_colors{$nick})");
     }
   } elsif ($op eq "preview") {
     Irssi::print ("\nAvailable colors:");
