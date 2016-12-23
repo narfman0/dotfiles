@@ -23,6 +23,7 @@ mv ~/.irssi ~/.irssi.old
 mkdir -p ~/.irssi
 ln -fs $SCRIPTPATH/.irssi/scripts ~/.irssi/
 ln -fs $SCRIPTPATH/.irssi/weed.theme ~/.irssi/
+ln -fs $SCRIPTPATH/.irssi/default.theme ~/.irssi/
 cp $SCRIPTPATH/.irssi/config ~/.irssi/
 sed -i -e "s/ZNC_PASS/$znc_pass/g" ~/.irssi/config
 
