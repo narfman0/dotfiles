@@ -10,6 +10,7 @@ alias ll='ls -FGlAhp'
 alias rf='find . 2> /dev/null | grep'
 alias striphtml="sed 's|<[^>]*>||g'"
 alias pt='python -m unittest discover'
+alias ta='tmux attach-session'
 if [ -x "$(command -v trash)" ]; then
     alias rm='trash'
 fi
