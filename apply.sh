@@ -27,4 +27,7 @@ ln -fs $SCRIPTPATH/.irssi/default.theme ~/.irssi/
 cp $SCRIPTPATH/.irssi/config ~/.irssi/
 sed -i -e "s/ZNC_PASS/$znc_pass/g" ~/.irssi/config
 
+mkdir -p ~/.newsbeuter
+ln -fs $SCRIPTPATH/.newsbeuter/urls ~/.newsbeuter/
+
 popd
