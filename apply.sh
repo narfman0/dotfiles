@@ -29,5 +29,6 @@ sed -i -e "s/ZNC_PASS/$znc_pass/g" ~/.irssi/config
 
 mkdir -p ~/.newsbeuter
 ln -fs $SCRIPTPATH/.newsbeuter/urls ~/.newsbeuter/
+ln -fs $SCRIPTPATH/.newsbeuter/config ~/.newsbeuter/
 
 popd
