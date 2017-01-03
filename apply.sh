@@ -19,6 +19,7 @@ ln -fs $SCRIPTPATH/.tmux.conf
 
 echo -n "What is your ZNC password (for irssi)? "
 read -s znc_pass
+rm -rf ~/.irssi.old
 mv ~/.irssi ~/.irssi.old
 mkdir -p ~/.irssi
 ln -fs $SCRIPTPATH/.irssi/scripts ~/.irssi/

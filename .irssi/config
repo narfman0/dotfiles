@@ -25,6 +25,22 @@ servers = (
   },
   {
     address = "znc.blastedstudios.com";
+    chatnet = "cmg-nptech-slack";
+    port = "6697";
+    autoconnect = "yes";
+    use_ssl = "yes";
+    password = "narfman0/cmg-nptech-slack:ZNC_PASS";
+  },
+  {
+    address = "znc.blastedstudios.com";
+    chatnet = "jasperslack";
+    port = "6697";
+    autoconnect = "yes";
+    use_ssl = "yes";
+    password = "narfman0/jasperslack:ZNC_PASS";
+  },
+  {
+    address = "znc.blastedstudios.com";
     chatnet = "zappa";
     port = "6697";
     use_ssl = "yes";
@@ -47,6 +63,12 @@ channels = (
 
   { name = "#general"; chatnet = "zappa"; autojoin = "Yes"; },
   { name = "#random"; chatnet = "zappa"; autojoin = "Yes"; },
+
+  { name = "#general"; chatnet = "jasperslack"; autojoin = "Yes"; },
+  { name = "#random"; chatnet = "jasperslack"; autojoin = "Yes"; },
+
+  { name = "#general"; chatnet = "cmg-nptech-slack"; autojoin = "Yes"; },
+  { name = "#random"; chatnet = "cmg-nptech-slack"; autojoin = "Yes"; },
 
   { name = "#general"; chatnet = "cmg_np_mobile"; autojoin = "Yes"; },
   { name = "#random"; chatnet = "cmg_np_mobile"; autojoin = "Yes"; },
@@ -269,8 +291,10 @@ settings = {
     user_name = "narfman0";
     nick = "narfman0";
   };
-  bell_beeps = ON;
-  beep_msg_level MSGS NOTICES DCC DCCMSGS HILIGHT;
   "fe-text" = { actlist_sort = "refnum"; };
-  "fe-common/core" = { theme = "weed"; };
+  "fe-common/core" = {
+    theme = "weed";
+    bell_beeps = "yes";
+    beep_msg_level = "MSGS NOTICES DCC DCCMSGS HILIGHT";
+  };
 };
