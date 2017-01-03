@@ -11,12 +11,20 @@ alias rf='find . 2> /dev/null | grep'
 alias striphtml="sed 's|<[^>]*>||g'"
 alias pt='python -m unittest discover'
 alias ta='tmux attach-session'
-alias ti='tmux new-session -s irssi irssi'
 alias tai='tmux attach-session -t irssi'
 alias tn='tmux new-session -s newsbeuter newsbeuter'
 if [ -x "$(command -v trash)" ]; then
     alias rm='trash'
 fi
+ti() {
+    tmux new-session -ds irssi
+    tmux new-window -n 'freenode' 'irssi -c freenode'
+    tmux new-window -n 'zappa' 'irssi -c zappa'
+    tmux new-window -n '757dev' 'irssi -c 757dev'
+    tmux new-window -n 'npmobile' 'irssi -c cmg_np_mobile'
+    tmux new-window -n 'nptech' 'irssi -c cmg-nptech-slack'
+    tmux -2 attach-session -d
+}
 td() {
     tmux new-session -d 'vim .'
     tmux split-window -v
