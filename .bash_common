@@ -23,6 +23,7 @@ ti() {
     tmux new-window -n '757dev' 'irssi -c 757dev'
     tmux new-window -n 'npmobile' 'irssi -c cmg_np_mobile'
     tmux new-window -n 'nptech' 'irssi -c cmg-nptech-slack'
+    tmux new-window -n 'cmgircs' 'irssi -c cmg_ircs'
     tmux -2 attach-session -d
 }
 td() {

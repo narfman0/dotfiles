@@ -22,6 +22,13 @@ servers = (
   },
   {
     address = "znc.blastedstudios.com";
+    chatnet = "cmg_ircs";
+    port = "6697";
+    use_ssl = "yes";
+    password = "narfman0/cmg_ircs:ZNC_PASS";
+  },
+  {
+    address = "znc.blastedstudios.com";
     chatnet = "cmg-nptech-slack";
     port = "6697";
     use_ssl = "yes";
@@ -49,6 +56,7 @@ chatnets = {
   cmg_np_mobile = { type = "IRC"; nick = "narfman0/cmg-np-mobile-slack"; };
   zappa = { type = "IRC"; nick = "narfman0/zappaslack"; };
   cmg-nptech-slack = { type = "IRC"; nick = "narfman0/cmg-nptech-slack"; };
+  cmg_ircs = { type = "IRC"; nick = "narfman0/cmg_ircs"; };
 };
 
 channels = (
@@ -70,6 +78,15 @@ channels = (
   { name = "#random"; chatnet = "cmg_np_mobile"; autojoin = "Yes"; },
   { name = "#tech"; chatnet = "cmg_np_mobile"; autojoin = "Yes"; },
   { name = "#dev_ux_private"; chatnet = "cmg_np_mobile"; autojoin = "Yes";},
+
+  { name = "#all"; chatnet = "cmg_ircs"; autojoin = "Yes"; },
+  { name = "#clug"; chatnet = "cmg_ircs"; autojoin = "Yes"; },
+  { name = "#interview"; chatnet = "cmg_ircs"; autojoin = "Yes"; },
+  { name = "#methode"; chatnet = "cmg_ircs"; autojoin = "Yes";},
+  { name = "#mobile"; chatnet = "cmg_ircs"; autojoin = "Yes";},
+  { name = "#newbies"; chatnet = "cmg_ircs"; autojoin = "Yes";},
+  { name = "#outsiders"; chatnet = "cmg_ircs"; autojoin = "Yes";},
+  { name = "#teatime"; chatnet = "cmg_ircs"; autojoin = "Yes";},
 
   { name = "#general-chat"; chatnet = "757dev"; autojoin = "Yes"; },
   { name = "#random"; chatnet = "757dev"; autojoin = "Yes"; },
