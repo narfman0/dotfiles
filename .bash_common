@@ -21,6 +21,10 @@ ti() {
     tmux new-window -n 'freenode' 'irssi -c freenode'
     tmux new-window -n 'zappa' 'irssi -c zappa'
     tmux new-window -n '757dev' 'irssi -c 757dev'
+    tmux -2 attach-session -d
+}
+ticmg() {
+    tmux new-session -ds irssi
     tmux new-window -n 'npmobile' 'irssi -c cmg_np_mobile'
     tmux new-window -n 'nptech' 'irssi -c cmg-nptech-slack'
     tmux new-window -n 'cmgircs' 'irssi -c cmg_ircs'
