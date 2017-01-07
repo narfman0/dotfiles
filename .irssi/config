@@ -4,6 +4,7 @@ servers = (
     chatnet = "freenode";
     port = "6697";
     use_ssl = "yes";
+    autoconnect = "yes";
     password = "narfman0/freenode:ZNC_PASS";
   },
   {
@@ -11,6 +12,7 @@ servers = (
     chatnet = "757dev";
     port = "6697";
     use_ssl = "yes";
+    autoconnect = "yes";
     password = "narfman0/757devslack:ZNC_PASS";
   },
   {
@@ -46,6 +48,7 @@ servers = (
     chatnet = "zappa";
     port = "6697";
     use_ssl = "yes";
+    autoconnect = "yes";
     password = "narfman0/zappaslack:ZNC_PASS";
   }
 );
