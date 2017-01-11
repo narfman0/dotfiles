@@ -18,6 +18,7 @@ Bundle 'scrooloose/nerdtree'
 Bundle 'Valloric/YouCompleteMe'
 Bundle 'ctrlpvim/ctrlp.vim'
 Plugin 'tmux-plugins/vim-tmux'
+Plugin 'joonty/vdebug'
 if iCanHazVundle == 0
     echo "Installing Bundles..."
     :BundleInstall
