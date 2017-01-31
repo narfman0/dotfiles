@@ -15,6 +15,8 @@ alias tai='tmux attach-session -t irssi'
 alias tn='tmux new-session -s newsbeuter newsbeuter'
 alias filebot='filebot.sh -rename --db TheTVDB -non-strict --format "{n} - {s00e00} - {t}"'
 alias beep='echo -e "\a"'
+alias filebotAnime='filebot.sh -rename --db anidb -non-strict --format "{n} - {s00e00} - {t}"'
+alias filebotTest='filebot.sh -rename --db TheTVDB -non-strict --format "{n} - {s00e00} - {t}" --action test'
 if [ -x "$(command -v trash)" ]; then
     alias rm='trash'
 fi
