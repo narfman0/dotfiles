@@ -6,6 +6,7 @@ export NSS_SSL_CBC_RANDOM_IV=0
 export PATH=$HOME/.local/bin:$HOME/bin:node_modules/.bin:$PATH
 export PS1="[\u@\h \w]$ "
 alias gr='git fetch; git rebase -i origin/master'
+alias gru='git fetch upstream; git rebase -i upstream/master'
 alias ll='ls -FGlAhp'
 alias rf='find . 2> /dev/null | grep'
 alias striphtml="sed 's|<[^>]*>||g'"
