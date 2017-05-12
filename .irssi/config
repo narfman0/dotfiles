@@ -63,7 +63,6 @@ chatnets = {
 };
 
 channels = (
-  { name = "#wz"; chatnet = "freenode"; autojoin = "Yes"; },
   { name = "#cmgd"; chatnet = "freenode"; autojoin = "Yes"; },
   { name = "#helgabot"; chatnet = "freenode"; autojoin = "Yes"; },
 
@@ -84,7 +83,6 @@ channels = (
   { name = "#all"; chatnet = "cmg_ircs"; autojoin = "Yes"; },
   { name = "#clug"; chatnet = "cmg_ircs"; autojoin = "Yes"; },
   { name = "#interview"; chatnet = "cmg_ircs"; autojoin = "Yes"; },
-  { name = "#methode"; chatnet = "cmg_ircs"; autojoin = "Yes";},
   { name = "#mobile"; chatnet = "cmg_ircs"; autojoin = "Yes";},
   { name = "#newbies"; chatnet = "cmg_ircs"; autojoin = "Yes";},
   { name = "#outsiders"; chatnet = "cmg_ircs"; autojoin = "Yes";},
@@ -94,6 +92,9 @@ channels = (
   { name = "#random"; chatnet = "757dev"; autojoin = "Yes"; },
   { name = "#android"; chatnet = "757dev"; autojoin = "Yes"; },
   { name = "#announcements"; chatnet = "757dev"; autojoin = "Yes"; },
+  { name = "#freelance"; chatnet = "757dev"; autojoin = "Yes"; },
+  { name = "#gaming"; chatnet = "757dev"; autojoin = "Yes"; },
+  { name = "#ios"; chatnet = "757dev"; autojoin = "Yes"; },
   { name = "#jobs"; chatnet = "757dev"; autojoin = "Yes"; },
   { name = "#machine-learning"; chatnet = "757dev"; autojoin = "Yes"; },
   { name = "#python"; chatnet = "757dev"; autojoin = "Yes"; },
@@ -310,5 +311,7 @@ settings = {
     theme = "weed";
     bell_beeps = "yes";
     beep_msg_level = "MSGS NOTICES DCC DCCMSGS HILIGHT";
+    autolog = "yes";
+    autolog_path = "~/.irclogs/%Y/$tag/$0.%m-%d.log";
   };
 };
