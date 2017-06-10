@@ -12,7 +12,7 @@ alias rf='find . 2> /dev/null | grep'
 alias striphtml="sed 's|<[^>]*>||g'"
 alias pt='python -m unittest discover'
 alias ta='tmux attach-session'
-alias tai='tmux attach-session -t irssi'
+alias tia='tmux attach-session -t irssi'
 alias tn='tmux new-session -s newsbeuter newsbeuter'
 alias tna='tmux attach-session -t newsbeuter'
 alias filebot='filebot.sh -rename --db TheTVDB -non-strict --format "{n} - {s00e00} - {t}"'
@@ -36,8 +36,9 @@ td() {
     tmux new-session -d 'vim .'
     tmux split-window -v
     tmux send-keys 'cd .' Enter
-    tmux split-window -h
-    tmux send-keys 'cd .' Enter
+    # haven't liked to split vertically recently
+    # tmux split-window -h
+    # tmux send-keys 'cd .' Enter
     tmux resize-p -y 10
     tmux -2 attach-session -d
 }
