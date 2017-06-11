@@ -38,3 +38,16 @@ Normal tmux movement with ctrl-a -> action is supported.
 Irssi has been configured and is easily accessible with::
 
     ti
+
+Newsbeuter can be loaded with::
+
+    tn
+
+There are a few bash shortcuts to reopen old stuff, add 'a' for attach::
+
+    # tmux newsbeuter attach
+    tna
+    # tmux irssi attach
+    tia
+    # tmux generic attach 'whatever'
+    ta
