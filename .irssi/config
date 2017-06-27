@@ -48,7 +48,6 @@ servers = (
     chatnet = "zappa";
     port = "6697";
     use_ssl = "yes";
-    autoconnect = "yes";
     password = "narfman0/zappaslack:ZNC_PASS";
   }
 );
@@ -57,7 +56,6 @@ chatnets = {
   freenode = {type = "IRC"; nick = "narfman0/freenode"; };
   757dev = { type = "IRC"; nick = "narfman0/757devslack"; };
   cmg_np_mobile = { type = "IRC"; nick = "narfman0/cmg-np-mobile-slack"; };
-  zappa = { type = "IRC"; nick = "narfman0/zappaslack"; };
   cmg-nptech-slack = { type = "IRC"; nick = "narfman0/cmg-nptech-slack"; };
   cmg_ircs = { type = "IRC"; nick = "narfman0/cmg_ircs"; };
 };
@@ -65,9 +63,6 @@ chatnets = {
 channels = (
   { name = "#cmgd"; chatnet = "freenode"; autojoin = "Yes"; },
   { name = "#helgabot"; chatnet = "freenode"; autojoin = "Yes"; },
-
-  { name = "#general"; chatnet = "zappa"; autojoin = "Yes"; },
-  { name = "#random"; chatnet = "zappa"; autojoin = "Yes"; },
 
   { name = "#general"; chatnet = "jasperslack"; autojoin = "Yes"; },
   { name = "#random"; chatnet = "jasperslack"; autojoin = "Yes"; },
