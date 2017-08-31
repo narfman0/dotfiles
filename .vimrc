@@ -137,16 +137,6 @@ vnoremap <C-c> "+y
 "insert mode system clipboard paste
 inoremap <C-v> <ESC>"+pa
 
-"disable arrow keys, hjkl or bust, or so the internet wants me to believe
-inoremap  <Up>     <NOP>
-inoremap  <Down>   <NOP>
-inoremap  <Left>   <NOP>
-inoremap  <Right>  <NOP>
-noremap   <Up>     <NOP>
-noremap   <Down>   <NOP>
-noremap   <Left>   <NOP>
-noremap   <Right>  <NOP>
-
 nnoremap <C-n> :set relativenumber!<cr>
 set relativenumber
 
