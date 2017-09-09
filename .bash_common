@@ -34,7 +34,7 @@ ticmg() {
     tmux -2 attach-session -d
 }
 td() {
-    tmux new-session -d 'vim .'
+    tmux new-session -d bash
     tmux split-window -v
     tmux send-keys 'cd .' Enter
     tmux split-window -h
