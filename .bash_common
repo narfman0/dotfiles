@@ -42,6 +42,9 @@ td() {
     tmux resize-p -y 10
     tmux -2 attach-session -d
 }
+newsbeuterpurge() {
+    sqlite3 -line ~/.newsbeuter/cache.db "DELETE FROM rss_item WHERE unread = 1 AND pubDate < ( SELECT strftime('%s','now') - (10*86400));"
+}
 function cd(){
     builtin cd "${*}"
     if [ -e ".env" ]; then
