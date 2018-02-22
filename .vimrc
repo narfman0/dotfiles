@@ -121,7 +121,7 @@ set noswapfile
 "Auto write changes and source vimrc immediately
 autocmd! bufwritepost .vimrc source %
 "set ctags paths
-set tags=./tags,tags,~/workspace/moreau/devel/cms_dev/tags
+set tags=./tags,tags
 set ttymouse=xterm2
 "Make clipboard copy verbatim instead of commenting forever if it hits one
 set clipboard=unnamed
@@ -146,6 +146,7 @@ set list
 "backup chars to play with: → ·
 set listchars=tab:>\ ,trail:·,nbsp:·
 
+" django templates syntax highlighting
 syn region  djangotagmarkers start="{{" end="}}"
 syn region  djangovariablemarkers start="{%" end="%}"
 command! -nargs=+ HiLink hi def link <args>
