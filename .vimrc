@@ -19,6 +19,9 @@ Bundle 'Valloric/YouCompleteMe'
 Bundle 'ctrlpvim/ctrlp.vim'
 Plugin 'tmux-plugins/vim-tmux'
 Plugin 'joonty/vdebug'
+Plugin 'jnurmine/Zenburn'
+Plugin 'tpope/vim-fugitive'
+Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 if iCanHazVundle == 0
     echo "Installing Bundles..."
     :BundleInstall
@@ -92,17 +95,42 @@ set notimeout ttimeout ttimeoutlen=200
 " Use <F11> to toggle between 'paste' and 'nopaste'
 set pastetoggle=<F11>
 
+" make sure we are utf8 happy
+set encoding=utf-8
 
 "------------------------------------------------------------
 " Indentation options {{{1
 "
 " Indentation settings according to personal preference.
-"indent python-y
 set tabstop=4
 set shiftwidth=4
 set softtabstop=4
 set shiftround
 set expandtab
+
+au BufNewFile,BufRead *.py:
+    \ set tabstop=4
+    \ set softtabstop=4
+    \ set shiftwidth=4
+    \ set textwidth=79
+    \ set expandtab
+    \ set autoindent
+    \ set fileformat=unix
+
+au BufNewFile,BufRead *.js, *.html, *.css:
+    \ set tabstop=2
+    \ set softtabstop=2
+    \ set shiftwidth=2
+
+" python virtualenv support
+py << EOF
+import os
+import sys
+if 'VIRTUAL_ENV' in os.environ:
+  project_base_dir = os.environ['VIRTUAL_ENV']
+  activate_this = os.path.join(project_base_dir, 'bin/activate_this.py')
+  execfile(activate_this, dict(__file__=activate_this))
+EOF
 
 " Map Y to act like D and C, i.e. to yank until EOL, rather than act as yy,
 " which is the default
@@ -118,32 +146,45 @@ set nobackup
 set nowb
 set noswapfile
 
-"Auto write changes and source vimrc immediately
+" Enable folding
+set foldmethod=indent
+set foldlevel=99
+" Enable folding with spacebar
+nnoremap <space> za
+
+" Auto write changes and source vimrc immediately
 autocmd! bufwritepost .vimrc source %
-"set ctags paths
+
+" set ctags paths
 set tags=./tags,tags
+
 set ttymouse=xterm2
-"Make clipboard copy verbatim instead of commenting forever if it hits one
+
+" Make clipboard copy verbatim instead of commenting forever if it hits one
 set clipboard=unnamed
-"Make obvious bar at column 110 to avoid overly long lines
+
+" Make obvious bar at column 110 to avoid overly long lines
 set colorcolumn=110
 highlight UnwanttedTab ctermbg=red guibg=darkred
 highlight TrailSpace guibg=red ctermbg=darkred
 match UnwanttedTab /\t/
 match TrailSpace / \+$/
+colorscheme zenburn
 
-"visual mode system clipboard copy
+" visual mode system clipboard copy
 vnoremap <C-c> "+y
-"insert mode system clipboard paste
+" insert mode system clipboard paste
 inoremap <C-v> <ESC>"+pa
 
+" enable/disable absolute line numbering vs relative
 nnoremap <C-n> :set relativenumber!<cr>
 set relativenumber
 
+" enable/disable syntastic linting
 map <C-u> :SyntasticToggleMode<cr>
 
 set list
-"backup chars to play with: → ·
+" backup chars to play with: → ·
 set listchars=tab:>\ ,trail:·,nbsp:·
 
 " django templates syntax highlighting
@@ -154,6 +195,7 @@ HiLink djangotagmarkers PreProc
 HiLink djangovariablemarkers PreProc
 delcommand HiLink
 
+" syntastic
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
@@ -178,4 +220,9 @@ let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in") | exe 'NERDTree' argv()[0] | wincmd p | ene | endif
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+let NERDTreeIgnore=['\.pyc$', '\~$'] "ignore files in NERDTree
 map <C-t> :NERDTreeToggle<CR>
+
+" ycm youcompleteme
+let g:ycm_autoclose_preview_window_after_completion=1
+map <leader>g  :YcmCompleter GoToDefinitionElseDeclaration<CR>
