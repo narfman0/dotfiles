@@ -9,6 +9,14 @@ servers = (
   },
   {
     address = "znc.blastedstudios.com";
+    chatnet = "speedrunslive";
+    port = "6697";
+    use_ssl = "yes";
+    autoconnect = "yes";
+    password = "narfman0/speedrunslive:ZNC_PASS";
+  },
+  {
+    address = "znc.blastedstudios.com";
     chatnet = "757dev";
     port = "6697";
     use_ssl = "yes";
@@ -54,6 +62,7 @@ servers = (
 
 chatnets = {
   freenode = {type = "IRC"; nick = "narfman0/freenode"; };
+  speedrunslive = {type = "IRC"; nick = "narfman0/speedrunslive"; };
   757dev = { type = "IRC"; nick = "narfman0/757devslack"; };
   cmg_np_mobile = { type = "IRC"; nick = "narfman0/cmg-np-mobile-slack"; };
   cmg-nptech-slack = { type = "IRC"; nick = "narfman0/cmg-nptech-slack"; };
@@ -63,6 +72,9 @@ chatnets = {
 channels = (
   { name = "#cmgd"; chatnet = "freenode"; autojoin = "Yes"; },
   { name = "#helgabot"; chatnet = "freenode"; autojoin = "Yes"; },
+
+  { name = "#speedrunslive"; chatnet = "speedrunslive"; autojoin = "Yes"; },
+  { name = "#smb3"; chatnet = "speedrunslive"; autojoin = "Yes"; },
 
   { name = "#general"; chatnet = "jasperslack"; autojoin = "Yes"; },
   { name = "#random"; chatnet = "jasperslack"; autojoin = "Yes"; },
