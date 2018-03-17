@@ -1,6 +1,12 @@
 servers = (
   {
     address = "znc.blastedstudios.com";
+    chatnet = "bitlbee";
+    port = "6667";
+    autoconnect = "yes";
+  },
+  {
+    address = "znc.blastedstudios.com";
     chatnet = "freenode";
     port = "6697";
     use_ssl = "yes";
@@ -25,67 +31,29 @@ servers = (
   },
   {
     address = "znc.blastedstudios.com";
-    chatnet = "cmg_np_mobile";
-    port = "6697";
-    use_ssl = "yes";
-    password = "narfman0/cmg-np-mobile-slack:ZNC_PASS";
-  },
-  {
-    address = "znc.blastedstudios.com";
     chatnet = "cmg_ircs";
     port = "6697";
     use_ssl = "yes";
     password = "narfman0/cmg_ircs:ZNC_PASS";
-  },
-  {
-    address = "znc.blastedstudios.com";
-    chatnet = "cmg-nptech-slack";
-    port = "6697";
-    use_ssl = "yes";
-    password = "narfman0/cmg-nptech-slack:ZNC_PASS";
-  },
-  {
-    address = "znc.blastedstudios.com";
-    chatnet = "jasperslack";
-    port = "6697";
-    use_ssl = "yes";
-    password = "narfman0/jasperslack:ZNC_PASS";
-  },
-  {
-    address = "znc.blastedstudios.com";
-    chatnet = "zappa";
-    port = "6697";
-    use_ssl = "yes";
-    password = "narfman0/zappaslack:ZNC_PASS";
   }
 );
 
 chatnets = {
+  bitlbee = {type = "IRC"; nick = "narfman0"; };
   freenode = {type = "IRC"; nick = "narfman0/freenode"; };
   speedrunslive = {type = "IRC"; nick = "narfman0/speedrunslive"; };
   757dev = { type = "IRC"; nick = "narfman0/757devslack"; };
-  cmg_np_mobile = { type = "IRC"; nick = "narfman0/cmg-np-mobile-slack"; };
-  cmg-nptech-slack = { type = "IRC"; nick = "narfman0/cmg-nptech-slack"; };
   cmg_ircs = { type = "IRC"; nick = "narfman0/cmg_ircs"; };
 };
 
 channels = (
+  { name = "&gtalk"; chatnet = "bitlbee"; autojoin = "Yes"; },
+
   { name = "#cmgd"; chatnet = "freenode"; autojoin = "Yes"; },
   { name = "#helgabot"; chatnet = "freenode"; autojoin = "Yes"; },
 
   { name = "#speedrunslive"; chatnet = "speedrunslive"; autojoin = "Yes"; },
   { name = "#smb3"; chatnet = "speedrunslive"; autojoin = "Yes"; },
-
-  { name = "#general"; chatnet = "jasperslack"; autojoin = "Yes"; },
-  { name = "#random"; chatnet = "jasperslack"; autojoin = "Yes"; },
-
-  { name = "#general"; chatnet = "cmg-nptech-slack"; autojoin = "Yes"; },
-  { name = "#random"; chatnet = "cmg-nptech-slack"; autojoin = "Yes"; },
-
-  { name = "#general"; chatnet = "cmg_np_mobile"; autojoin = "Yes"; },
-  { name = "#random"; chatnet = "cmg_np_mobile"; autojoin = "Yes"; },
-  { name = "#tech"; chatnet = "cmg_np_mobile"; autojoin = "Yes"; },
-  { name = "#dev_ux_private"; chatnet = "cmg_np_mobile"; autojoin = "Yes";},
 
   { name = "#all"; chatnet = "cmg_ircs"; autojoin = "Yes"; },
   { name = "#clug"; chatnet = "cmg_ircs"; autojoin = "Yes"; },
@@ -99,13 +67,10 @@ channels = (
   { name = "#random"; chatnet = "757dev"; autojoin = "Yes"; },
   { name = "#android"; chatnet = "757dev"; autojoin = "Yes"; },
   { name = "#announcements"; chatnet = "757dev"; autojoin = "Yes"; },
-  { name = "#freelance"; chatnet = "757dev"; autojoin = "Yes"; },
   { name = "#gaming"; chatnet = "757dev"; autojoin = "Yes"; },
-  { name = "#ios"; chatnet = "757dev"; autojoin = "Yes"; },
-  { name = "#jobs"; chatnet = "757dev"; autojoin = "Yes"; },
   { name = "#machine-learning"; chatnet = "757dev"; autojoin = "Yes"; },
   { name = "#python"; chatnet = "757dev"; autojoin = "Yes"; },
-  { name = "#robotics"; chatnet = "757dev"; autojoin = "Yes"; },
+  { name = "#robotics-iot"; chatnet = "757dev"; autojoin = "Yes"; },
   { name = "#serverless"; chatnet = "757dev"; autojoin = "Yes"; },
   { name = "#sysadmin"; chatnet = "757dev"; autojoin = "Yes"; }
 );
