@@ -2,8 +2,10 @@ servers = (
   {
     address = "znc.blastedstudios.com";
     chatnet = "bitlbee";
-    port = "6667";
+    port = "6697";
+    use_ssl = "yes";
     autoconnect = "yes";
+    password = "narfman0/bitlbee:ZNC_PASS";
   },
   {
     address = "znc.blastedstudios.com";
@@ -18,7 +20,6 @@ servers = (
     chatnet = "speedrunslive";
     port = "6697";
     use_ssl = "yes";
-    autoconnect = "yes";
     password = "narfman0/speedrunslive:ZNC_PASS";
   },
   {
@@ -48,12 +49,11 @@ chatnets = {
 
 channels = (
   { name = "&gtalk"; chatnet = "bitlbee"; autojoin = "Yes"; },
+  { name = "#discord-narfman0-general"; chatnet = "bitlbee"; autojoin = "Yes"; },
+  { name = "#discord-smb-smb3"; chatnet = "bitlbee"; autojoin = "Yes"; },
 
   { name = "#cmgd"; chatnet = "freenode"; autojoin = "Yes"; },
   { name = "#helgabot"; chatnet = "freenode"; autojoin = "Yes"; },
-
-  { name = "#speedrunslive"; chatnet = "speedrunslive"; autojoin = "Yes"; },
-  { name = "#smb3"; chatnet = "speedrunslive"; autojoin = "Yes"; },
 
   { name = "#all"; chatnet = "cmg_ircs"; autojoin = "Yes"; },
   { name = "#clug"; chatnet = "cmg_ircs"; autojoin = "Yes"; },
