@@ -18,7 +18,7 @@ Bundle 'scrooloose/nerdtree'
 Bundle 'Valloric/YouCompleteMe'
 Bundle 'ctrlpvim/ctrlp.vim'
 Plugin 'tmux-plugins/vim-tmux'
-Plugin 'joonty/vdebug'
+"Plugin 'joonty/vdebug'
 Plugin 'jnurmine/Zenburn'
 Plugin 'tpope/vim-fugitive'
 Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
