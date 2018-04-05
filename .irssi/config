@@ -32,6 +32,13 @@ servers = (
   },
   {
     address = "znc.blastedstudios.com";
+    chatnet = "twitch";
+    port = "6697";
+    use_ssl = "yes";
+    password = "narfman0/twitch:ZNC_PASS";
+  },
+  {
+    address = "znc.blastedstudios.com";
     chatnet = "cmg_ircs";
     port = "6697";
     use_ssl = "yes";
@@ -42,6 +49,7 @@ servers = (
 chatnets = {
   bitlbee = {type = "IRC"; nick = "narfman0"; };
   freenode = {type = "IRC"; nick = "narfman0/freenode"; };
+  twitch = {type = "IRC"; nick = "narfman0/twitch"; };
   speedrunslive = {type = "IRC"; nick = "narfman0/speedrunslive"; };
   757dev = { type = "IRC"; nick = "narfman0/757devslack"; };
   cmg_ircs = { type = "IRC"; nick = "narfman0/cmg_ircs"; };
@@ -51,6 +59,8 @@ channels = (
   { name = "&gtalk"; chatnet = "bitlbee"; autojoin = "Yes"; },
   { name = "#discord-narfman0-general"; chatnet = "bitlbee"; autojoin = "Yes"; },
   { name = "#discord-smb-smb3"; chatnet = "bitlbee"; autojoin = "Yes"; },
+
+  { name = "#narfman0"; chatnet = "twitch"; autojoin = "Yes"; },
 
   { name = "#cmgd"; chatnet = "freenode"; autojoin = "Yes"; },
   { name = "#helgabot"; chatnet = "freenode"; autojoin = "Yes"; },
