@@ -20,6 +20,7 @@ Bundle 'ctrlpvim/ctrlp.vim'
 Plugin 'tmux-plugins/vim-tmux'
 "Plugin 'joonty/vdebug'
 Plugin 'jnurmine/Zenburn'
+Plugin 'narfman0/cscope_maps'
 Plugin 'tpope/vim-fugitive'
 Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 if iCanHazVundle == 0
