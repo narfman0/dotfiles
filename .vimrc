@@ -158,6 +158,7 @@ autocmd! bufwritepost .vimrc source %
 
 " set ctags paths
 set tags=./tags,tags
+set nocscopeverbose
 
 set ttymouse=xterm2
 
