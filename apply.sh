@@ -10,7 +10,6 @@ fi
 mv .vimrc .vimrc.old
 ln -fs $SCRIPTPATH/.vimrc
 mkdir -p .vim/colors
-rsync -avz $SCRIPTPATH/.vim/plugin/*.vim .vim/plugin
 
 mv .conkyrc .conkyrc.old
 ln -fs $SCRIPTPATH/.conkyrc
