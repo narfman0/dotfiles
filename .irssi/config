@@ -25,7 +25,8 @@ servers = (
   {
     address = "znc.blastedstudios.com";
     chatnet = "757dev";
-    port = "6668";
+    port = "6697";
+    use_ssl = "yes";
     autoconnect = "yes";
     password = "narfman0/757dev:ZNC_PASS";
   },
