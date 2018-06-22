@@ -36,4 +36,8 @@ mkdir -p ~/.newsbeuter
 ln -fs $SCRIPTPATH/.newsbeuter/urls ~/.newsbeuter/
 ln -fs $SCRIPTPATH/.newsbeuter/config ~/.newsbeuter/
 
+if [ ! -f ~/.git-completion.bash ]; then
+  curl https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash -o ~/.git-completion.bash
+fi
+
 popd
