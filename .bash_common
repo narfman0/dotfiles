@@ -54,3 +54,6 @@ function cd(){
 if [ -f ~/.git-completion.bash ]; then
   . ~/.git-completion.bash
 fi
+if [ -f ~/.tmux-completion.bash ]; then
+  . ~/.tmux-completion.bash
+fi

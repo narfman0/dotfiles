@@ -40,4 +40,8 @@ if [ ! -f ~/.git-completion.bash ]; then
   curl https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash -o ~/.git-completion.bash
 fi
 
+if [ ! -f ~/.tmux-completion.bash ]; then
+  curl https://raw.githubusercontent.com/narfman0/tmux-bash-completion/master/completions/tmux -o ~/.tmux-completion.bash
+fi
+
 popd
