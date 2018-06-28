@@ -5,21 +5,31 @@ export LSCOLORS=ExFxBxDxCxegedabagacad
 export NSS_SSL_CBC_RANDOM_IV=0
 export PATH=$HOME/.local/bin:$HOME/bin:node_modules/.bin:$PATH
 export PS1="[\u@\h \w]$ "
-alias gr='git fetch; git rebase -i origin/master'
-alias gru='git fetch upstream; git rebase -i upstream/master'
+
 alias ll='ls -FGlAhp'
 alias rf='find . 2> /dev/null | grep'
 alias striphtml="sed 's|<[^>]*>||g'"
 alias pt='python -m unittest discover'
+alias ampc='cp $1 `grep UUID -A1 -a $1 | grep -io "[-A-Z0-9]\{36\}"`'
+alias beep='echo -e "\a"'
+
+alias gr='git fetch; git rebase -i origin/master'
+alias grod='git fetch; git rebase -i origin/develop'
+alias gru='git fetch upstream; git rebase -i upstream/master'
+
 alias ta='tmux attach-session'
 alias tia='tmux attach-session -t irssi'
 alias tn='tmux new-session -s newsbeuter newsbeuter'
 alias tna='tmux attach-session -t newsbeuter'
-alias ampc='cp $1 `grep UUID -A1 -a $1 | grep -io "[-A-Z0-9]\{36\}"`'
+
+alias tfp='terraform plan --var-file=secrets.tfvars'
+alias tfa='terraform apply --var-file=secrets.tfvars'
+alias tfd='terraform destroy --var-file=secrets.tfvars'
+
 alias filebot='filebot.sh -rename --db TheTVDB -non-strict --format "{n} - {s00e00} - {t}"'
-alias beep='echo -e "\a"'
 alias filebotAnime='filebot.sh -rename --db anidb -non-strict --format "{n} - {s00e00} - {t}"'
 alias filebotTest='filebot.sh -rename --db TheTVDB -non-strict --format "{n} - {s00e00} - {t}" --action test'
+
 if [ -x "$(command -v trash)" ]; then
     alias rm='trash'
 fi
