@@ -36,4 +36,7 @@ mkdir -p ~/.newsbeuter
 ln -fs $SCRIPTPATH/.newsbeuter/urls ~/.newsbeuter/
 ln -fs $SCRIPTPATH/.newsbeuter/config ~/.newsbeuter/
 
+git config --global user.email "narfman0@gmail.com"
+git config --global user.name "Jon Robison"
+
 popd
