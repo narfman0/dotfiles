@@ -36,6 +36,14 @@ mkdir -p ~/.newsbeuter
 ln -fs $SCRIPTPATH/.newsbeuter/urls ~/.newsbeuter/
 ln -fs $SCRIPTPATH/.newsbeuter/config ~/.newsbeuter/
 
+if [ ! -f ~/.git-completion.bash ]; then
+  curl https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash -o ~/.git-completion.bash
+fi
+
+if [ ! -f ~/.tmux-completion.bash ]; then
+  curl https://raw.githubusercontent.com/narfman0/tmux-bash-completion/master/completions/tmux -o ~/.tmux-completion.bash
+fi
+
 git config --global user.email "narfman0@gmail.com"
 git config --global user.name "Jon Robison"
 

@@ -28,7 +28,7 @@ servers = (
     port = "6697";
     use_ssl = "yes";
     autoconnect = "yes";
-    password = "narfman0/757devslack:ZNC_PASS";
+    password = "narfman0/757dev:ZNC_PASS";
   },
   {
     address = "znc.blastedstudios.com";
@@ -51,7 +51,7 @@ chatnets = {
   freenode = {type = "IRC"; nick = "narfman0/freenode"; };
   twitch = {type = "IRC"; nick = "narfman0/twitch"; };
   speedrunslive = {type = "IRC"; nick = "narfman0/speedrunslive"; };
-  757dev = { type = "IRC"; nick = "narfman0/757devslack"; };
+  757dev = { type = "IRC"; nick = "narfman0/757dev"; };
   cmg_ircs = { type = "IRC"; nick = "narfman0/cmg_ircs"; };
 };
 
