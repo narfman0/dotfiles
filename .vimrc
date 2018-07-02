@@ -22,6 +22,7 @@ Plugin 'tmux-plugins/vim-tmux'
 Plugin 'jnurmine/Zenburn'
 Plugin 'narfman0/cscope_maps'
 Plugin 'tpope/vim-fugitive'
+Plugin 'hashivim/vim-terraform'
 Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 if iCanHazVundle == 0
     echo "Installing Bundles..."
