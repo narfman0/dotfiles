@@ -37,18 +37,9 @@ fi
 ti() {
     tmux new-session -s irssi irssi
 }
-ticmg() {
-    tmux new-session -ds irssi
-    tmux new-window -n 'npmobile' 'irssi -c cmg_np_mobile'
-    tmux new-window -n 'nptech' 'irssi -c cmg-nptech-slack'
-    tmux new-window -n 'cmgircs' 'irssi -c cmg_ircs'
-    tmux -2 attach-session -d
-}
 td() {
     tmux new-session -d bash
     tmux split-window -v
-    tmux send-keys 'cd .' Enter
-    tmux split-window -h
     tmux send-keys 'cd .' Enter
     tmux resize-p -y 10
     tmux -2 attach-session -d
