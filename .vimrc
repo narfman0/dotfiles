@@ -1,6 +1,11 @@
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
+" we need to silently run python3 to shut up warnings :|
+if has('python3')
+    silent! python3 1
+endif
+
 let iCanHazVundle=1
 let vundle_readme=expand('~/.vim/bundle/vundle.vim/README.md')
 if !filereadable(vundle_readme)
