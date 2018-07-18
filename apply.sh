@@ -14,6 +14,9 @@ mkdir -p .vim/colors
 mv .conkyrc .conkyrc.old
 ln -fs $SCRIPTPATH/.conkyrc
 
+mv .gitignore_global .gitignore_global.bak
+ln -fs $SCRIPTPATH/.gitignore_global
+
 mkdir -p .tmux
 mv .tmux.conf .tmux.conf.old
 ln -fs $SCRIPTPATH/.tmux.conf
@@ -46,5 +49,6 @@ fi
 
 git config --global user.email "narfman0@gmail.com"
 git config --global user.name "Jon Robison"
+git config --global core.excludesfile ~/.gitignore_global
 
 popd
