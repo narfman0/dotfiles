@@ -28,6 +28,8 @@ Plugin 'jnurmine/Zenburn'
 Plugin 'narfman0/cscope_maps'
 Plugin 'tpope/vim-fugitive'
 Plugin 'hashivim/vim-terraform'
+Plugin 'fatih/vim-go'
+Plugin 'ambv/black'
 Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 if iCanHazVundle == 0
     echo "Installing Bundles..."
@@ -123,6 +125,9 @@ au BufNewFile,BufRead *.py
     \ set expandtab |
     \ set autoindent |
     \ set fileformat=unix
+
+" Autorun black for python files on save
+autocmd BufWritePre *.py execute ':Black'
 
 au BufNewFile,BufRead *.js,*.html,*.css
     \ set tabstop=2 |
