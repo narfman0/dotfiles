@@ -31,6 +31,10 @@ alias filebot='filebot.sh -rename --db TheTVDB -non-strict --format "{n} - {s00e
 alias filebotAnime='filebot.sh -rename --db anidb -non-strict --format "{n} - {s00e00} - {t}"'
 alias filebotTest='filebot.sh -rename --db TheTVDB -non-strict --format "{n} - {s00e00} - {t}" --action test'
 
+alias genpass="openssl rand -base64 20"
+alias c='clear'
+alias ipe='curl ipinfo.io/ip'
+
 if [ -x "$(command -v trash)" ]; then
     alias rm='trash'
 fi
