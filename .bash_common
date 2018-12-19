@@ -64,4 +64,7 @@ fi
 if [ -f ~/.tmux-completion.bash ]; then
   . ~/.tmux-completion.bash
 fi
+if [ -f ~/.vault-completion.bash ]; then
+  . ~/.vault-completion.bash
+fi
 complete -W "\`grep -oE '^[a-zA-Z0-9_.-]+:([^=]|$)' Makefile | sed 's/[^a-zA-Z0-9_.-]*$//'\`" make

@@ -47,6 +47,10 @@ if [ ! -f ~/.tmux-completion.bash ]; then
   curl https://raw.githubusercontent.com/narfman0/tmux-bash-completion/master/completions/tmux -o ~/.tmux-completion.bash
 fi
 
+if [ ! -f ~/.vault-completion.bash ]; then
+  curl https://raw.githubusercontent.com/narfman0/bash-it/master/completion/available/vault.completion.bash -o ~/.vault-completion.bash
+fi
+
 git config --global user.email "narfman0@gmail.com"
 git config --global user.name "Jon Robison"
 git config --global core.excludesfile ~/.gitignore_global

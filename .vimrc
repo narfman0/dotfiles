@@ -121,7 +121,7 @@ au BufNewFile,BufRead *.py
     \ set tabstop=4 |
     \ set softtabstop=4 |
     \ set shiftwidth=4 |
-    \ set textwidth=79 |
+    \ set textwidth=87 |
     \ set expandtab |
     \ set autoindent |
     \ set fileformat=unix
@@ -213,7 +213,7 @@ let g:syntastic_check_on_wq = 0
 
 let g:syntastic_python_checkers = ['pylint', 'flake8']
 let g:syntastic_python_pylint_args = "--load-plugins pylint_django --max-line-length=88 --disable=F0401"
-let g:syntastic_python_flake8_args="--max-line-length=88 --ignore=E203"
+let g:syntastic_python_flake8_args="--max-line-length=88 --ignore=E203 --ignore=E402 --ignore=W503"
 let g:syntastic_javascript_checkers = ['jshint']
 
 let g:ctrlp_map = '<c-p>'
