@@ -23,11 +23,6 @@ alias tia='tmux attach-session -t irssi'
 alias tn='tmux new-session -s newsbeuter newsbeuter'
 alias tna='tmux attach-session -t newsbeuter'
 
-alias tfp='terraform plan --var-file=secrets.tfvars'
-alias tfa='terraform apply --var-file=secrets.tfvars'
-alias tfd='terraform destroy --var-file=secrets.tfvars'
-alias tfaa='terraform apply -auto-approve'
-
 alias filebot='filebot.sh -rename --db TheTVDB -non-strict --format "{n} - {s00e00} - {t}"'
 alias filebotAnime='filebot.sh -rename --db anidb -non-strict --format "{n} - {s00e00} - {t}"'
 alias filebotTest='filebot.sh -rename --db TheTVDB -non-strict --format "{n} - {s00e00} - {t}" --action test'
@@ -39,6 +34,22 @@ alias ipe='curl ipinfo.io/ip'
 if [ -x "$(command -v trash)" ]; then
     alias rm='trash'
 fi
+
+tfvfs() {
+    if [ -f 'secrets.tfvars' ]; then
+        echo "--var-file=secrets.tfvars"
+    fi
+}
+tfi() {
+    if [ ! -d '.terraform' ]; then
+        terraform init
+    fi
+}
+alias tfp='tfi; terraform plan $(tfvfs)'
+alias tfa='tfi; terraform apply $(tfvfs)'
+alias tfd='tfi; terraform destroy $(tfvfs)'
+alias tfaa='tfi; terraform apply -auto-approve $(tfvfs)'
+
 ti() {
     tmux new-session -s irssi irssi
 }
