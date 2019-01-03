@@ -35,16 +35,8 @@ if [ -x "$(command -v trash)" ]; then
     alias rm='trash'
 fi
 
-tfvfs() {
-    if [ -f 'secrets.tfvars' ]; then
-        echo "--var-file=secrets.tfvars"
-    fi
-}
-tfi() {
-    if [ ! -d '.terraform' ]; then
-        terraform init
-    fi
-}
+alias tfvfs='if [ -f "secrets.tfvars" ]; then echo "--var-file=secrets.tfvars"; fi'
+alias tfi='if [ ! -d ".terraform" ]; then terraform init; fi'
 alias tfp='tfi; terraform plan $(tfvfs)'
 alias tfa='tfi; terraform apply $(tfvfs)'
 alias tfd='tfi; terraform destroy $(tfvfs)'
