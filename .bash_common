@@ -35,12 +35,16 @@ if [ -x "$(command -v trash)" ]; then
     alias rm='trash'
 fi
 
-alias tfvfs='if [ -f "secrets.tfvars" ]; then echo "--var-file=secrets.tfvars"; fi'
-alias tfi='if [ ! -d ".terraform" ]; then terraform init; fi'
-alias tfp='tfi; terraform plan $(tfvfs)'
-alias tfa='tfi; terraform apply $(tfvfs)'
-alias tfd='tfi; terraform destroy $(tfvfs)'
-alias tfaa='tfi; terraform apply -auto-approve $(tfvfs)'
+alias tfcvfs='if [ -f "secrets.tfvars" ]; then echo "--var-file=secrets.tfvars"; fi'
+alias tfci='if [ ! -d ".terraform" ]; then terraform init; fi'
+alias tfa='tfci; terraform apply $(tfcvfs)'
+alias tfaa='tfci; terraform apply -auto-approve $(tfcvfs)'
+alias tfd='tfci; terraform destroy $(tfcvfs)'
+alias tffu='tfci; terraform force-unlock $(tfcvfs)'
+alias tfinit='terraform init $(tfcvfs)'
+alias tfi='tfci; terraform import $(tfcvfs)'
+alias tfp='tfci; terraform plan $(tfcvfs)'
+alias tfs='tfci; terraform state $(tfcvfs)'
 
 ti() {
     tmux new-session -s irssi irssi
