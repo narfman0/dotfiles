@@ -55,4 +55,15 @@ git config --global user.email "narfman0@gmail.com"
 git config --global user.name "Jon Robison"
 git config --global core.excludesfile ~/.gitignore_global
 
+echo "Installing vim plugins"
+vim -E -s -u "~/.vimrc" +PluginInstall +qall
+pushd .vim/bundle/YouCompleteMe
+if [ ! -e "third_party/ycmd/ycm_core.so" ]; then
+    echo "YCM not compiled, compiling"
+    ./install.py
+else
+    echo "YCM already compiling, skipping"
+fi
+popd
+
 popd
