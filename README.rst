@@ -16,13 +16,9 @@ This will back up and apply all dotfiles and symbolically link, copy, or
 otherwise apply what settings are desired. Likely used in conjunction
 with an ansible script for installing ```vim tmux irssi```
 
-Linux (dmf/rpm based)::
+Install via install script::
 
-    sudo dnf install vim tmux irssi conky -y
-
-OSX::
-
-    brew install vim-nox tmux irssi
+   sudo ./install.sh
 
 Usage
 -----
