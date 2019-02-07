@@ -33,7 +33,7 @@ fi
 echo "Installing for os: $OS  version: $VER"
 
 if [ "$OS" == "Fedora" ]; then
-    dnf install -y vim gcc-g++ gcc cmake python-devel python3-devel irssi the_silver_searcher mutt git tmux
+    dnf install -y vim gcc-c++ gcc cmake python-devel python3-devel irssi the_silver_searcher mutt git tmux
 elif [ "$OS" == "Ubuntu" ]; then
     apt update
     apt install -y vim g++ cmake python-dev python3-dev the_silver_searcher mutt git tmux
