@@ -33,10 +33,15 @@ fi
 echo "Installing for os: $OS  version: $VER"
 
 if [ "$OS" == "Fedora" ]; then
-    dnf install -y vim cmake gcc gcc-g++ git irssi mutt python-devel python3-devel sshfs the_silver_searcher tmux
+    dnf install -y \
+        cmake gcc gcc-c++ git irssi mutt \
+        python-devel python3-devel \
+        sshfs the_silver_searcher tmux vim
 elif [ "$OS" == "Ubuntu" ]; then
     apt update
-    apt install -y cmake g++ git mutt python-dev python3-dev sshfs the_silver_searcher tmux vim
+    apt install -y \
+        cmake g++ git mutt python-dev python3-dev \
+        sshfs the_silver_searcher tmux vim
 elif [ "$OS" == "OSX" ]; then
     echo "Note: unsure if the OS switch above works"
     if ! [ -x "$(command -v brew)" ]; then
