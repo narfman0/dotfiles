@@ -41,7 +41,7 @@ elif [ "$OS" == "Ubuntu" ]; then
     apt update
     apt install -y \
         cmake g++ git mutt python-dev python3-dev \
-        sshfs the_silver_searcher tmux vim
+        sshfs silversearcher-ag tmux vim
 elif [ "$OS" == "OSX" ]; then
     echo "Note: unsure if the OS switch above works"
     if ! [ -x "$(command -v brew)" ]; then
