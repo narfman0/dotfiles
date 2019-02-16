@@ -46,6 +46,7 @@ alias tfinit='terraform init $(tfcvfs)'
 alias tfi='tfci; terraform import $(tfcvfs)'
 alias tfp='tfci; terraform plan $(tfcvfs)'
 alias tfs='tfci; terraform state $(tfcvfs)'
+alias tffmt='terraform fmt'
 
 #alias agr='ag "$1" --nogroup | awk '{print substr($1,1,index($1,":")-1);}' | xargs -I {} sed -i '.back' -e "s/$1/$2/g" {}'
 ti() {
