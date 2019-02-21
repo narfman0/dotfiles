@@ -41,9 +41,8 @@ elif [ "$OS" == "Ubuntu" ]; then
     apt update
     apt install -y \
         cmake g++ git jq mutt python-dev python3-dev \
-        sshfs the_silver_searcher tmux vim
-elif [ "$OS" == "OSX" ]; then
-    echo "Note: unsure if the OS switch above works"
+        sshfs silversearcher-ag tmux vim
+elif [ "$OS" == "Darwin" ]; then
     if ! [ -x "$(command -v brew)" ]; then
         /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
     fi
