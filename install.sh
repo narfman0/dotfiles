@@ -49,9 +49,9 @@ elif [ "$OS" == "Darwin" ]; then
     # required before sshfs
     brew cask install osxfuse
     brew install vim-nox --with-override-system-vi
-    brew install cmake jq mutt pipenv pyenv sshfs terraform vault
+    brew install cmake jq mutt pyenv sshfs terraform vault
     brew cask install intellij-ce visual-studio-code firefox google-chrome
-    echo "Please setup pyenv to install py3 :)"
+    echo "Please setup pyenv to install py3 and pipenv :)"
 else
     echo "Operating system: $OS not recognized :("
 fi
