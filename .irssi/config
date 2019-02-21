@@ -12,7 +12,6 @@ servers = (
     chatnet = "freenode";
     port = "6697";
     use_ssl = "yes";
-    autoconnect = "yes";
     password = "narfman0/freenode:ZNC_PASS";
   },
   {
@@ -37,52 +36,45 @@ servers = (
     use_ssl = "yes";
     password = "narfman0/twitch:ZNC_PASS";
   },
-  {
-    address = "znc.blastedstudios.com";
-    chatnet = "cmg_ircs";
-    port = "6697";
-    use_ssl = "yes";
-    password = "narfman0/cmg_ircs:ZNC_PASS";
-  }
 );
 
 chatnets = {
-  bitlbee = {type = "IRC"; nick = "narfman0"; };
-  freenode = {type = "IRC"; nick = "narfman0/freenode"; };
-  twitch = {type = "IRC"; nick = "narfman0/twitch"; };
-  speedrunslive = {type = "IRC"; nick = "narfman0/speedrunslive"; };
+  bitlbee = { type = "IRC"; nick = "narfman0"; };
+  freenode = { type = "IRC"; nick = "narfman0/freenode"; };
+  twitch = { type = "IRC"; nick = "narfman0/twitch"; };
+  speedrunslive = { type = "IRC"; nick = "narfman0/speedrunslive"; };
   757dev = { type = "IRC"; nick = "narfman0/757dev"; };
-  cmg_ircs = { type = "IRC"; nick = "narfman0/cmg_ircs"; };
 };
 
 channels = (
   { name = "&gtalk"; chatnet = "bitlbee"; autojoin = "Yes"; },
-  { name = "#discord-narfman0-general"; chatnet = "bitlbee"; autojoin = "Yes"; },
-  { name = "#discord-smb-smb3"; chatnet = "bitlbee"; autojoin = "Yes"; },
+  {
+    name = "#discord-narfman0-general";
+    chatnet = "bitlbee";
+    autojoin = "Yes";
+  },
+  { 
+    name = "#discord-smb-smb3";
+    chatnet = "bitlbee";
+    autojoin = "Yes";
+  },
 
   { name = "#narfman0"; chatnet = "twitch"; autojoin = "Yes"; },
 
   { name = "#cmgd"; chatnet = "freenode"; autojoin = "Yes"; },
   { name = "#helgabot"; chatnet = "freenode"; autojoin = "Yes"; },
 
-  { name = "#all"; chatnet = "cmg_ircs"; autojoin = "Yes"; },
-  { name = "#clug"; chatnet = "cmg_ircs"; autojoin = "Yes"; },
-  { name = "#interview"; chatnet = "cmg_ircs"; autojoin = "Yes"; },
-  { name = "#mobile"; chatnet = "cmg_ircs"; autojoin = "Yes";},
-  { name = "#newbies"; chatnet = "cmg_ircs"; autojoin = "Yes";},
-  { name = "#outsiders"; chatnet = "cmg_ircs"; autojoin = "Yes";},
-  { name = "#teatime"; chatnet = "cmg_ircs"; autojoin = "Yes";},
-
   { name = "#general-chat"; chatnet = "757dev"; autojoin = "Yes"; },
   { name = "#random"; chatnet = "757dev"; autojoin = "Yes"; },
-  { name = "#android"; chatnet = "757dev"; autojoin = "Yes"; },
   { name = "#announcements"; chatnet = "757dev"; autojoin = "Yes"; },
+  { name = "#gamedev"; chatnet = "757dev"; autojoin = "Yes"; },
   { name = "#gaming"; chatnet = "757dev"; autojoin = "Yes"; },
-  { name = "#machine-learning"; chatnet = "757dev"; autojoin = "Yes"; },
   { name = "#python"; chatnet = "757dev"; autojoin = "Yes"; },
   { name = "#robotics-iot"; chatnet = "757dev"; autojoin = "Yes"; },
+  { name = "#rogue-one-veterans"; chatnet = "757dev"; autojoin = "Yes"; },
   { name = "#serverless"; chatnet = "757dev"; autojoin = "Yes"; },
-  { name = "#sysadmin"; chatnet = "757dev"; autojoin = "Yes"; }
+  { name = "#vr-ar"; chatnet = "757dev"; autojoin = "Yes"; },
+  { name = "#wz"; chatnet = "757dev"; autojoin = "Yes"; },
 );
 
 aliases = {
@@ -291,9 +283,174 @@ settings = {
   "fe-text" = { actlist_sort = "refnum"; };
   "fe-common/core" = {
     theme = "weed";
-    bell_beeps = "yes";
     beep_msg_level = "MSGS NOTICES DCC DCCMSGS HILIGHT";
     autolog = "yes";
     autolog_path = "~/.irclogs/%Y/$tag/$0.%m-%d.log";
   };
+  "perl/core/scripts" = { awl_shared_sbar = "OFF"; };
 };
+logs = { };
+windows = {
+  1 = { immortal = "yes"; name = "(status)"; level = "ALL"; };
+  2 = {
+    items = (
+      {
+        type = "CHANNEL";
+        chat_type = "IRC";
+        name = "#discord-narfman0-general";
+        tag = "bitlbee";
+      }
+    );
+  };
+  3 = {
+    items = (
+      {
+        type = "CHANNEL";
+        chat_type = "IRC";
+        name = "#discord-smb-smb3";
+        tag = "bitlbee";
+      }
+    );
+  };
+  4 = {
+    items = (
+      {
+        type = "CHANNEL";
+        chat_type = "IRC";
+        name = "#discord-smb-general";
+        tag = "bitlbee";
+      }
+    );
+  };
+  5 = {
+    items = (
+      {
+        type = "CHANNEL";
+        chat_type = "IRC";
+        name = "#discord-smb-romhacks";
+        tag = "bitlbee";
+      }
+    );
+  };
+  6 = {
+    items = (
+      {
+        type = "CHANNEL";
+        chat_type = "IRC";
+        name = "#discord-smb3-romhacking-general";
+        tag = "bitlbee";
+      }
+    );
+  };
+  7 = {
+    items = (
+      {
+        type = "CHANNEL";
+        chat_type = "IRC";
+        name = "#general-chat";
+        tag = "757dev";
+      }
+    );
+  };
+  8 = {
+    items = (
+      {
+        type = "CHANNEL";
+        chat_type = "IRC";
+        name = "#random";
+        tag = "757dev";
+      }
+    );
+  };
+  9 = {
+    items = (
+      {
+        type = "CHANNEL";
+        chat_type = "IRC";
+        name = "#announcements";
+        tag = "757dev";
+      }
+    );
+  };
+  10 = {
+    items = (
+      {
+        type = "CHANNEL";
+        chat_type = "IRC";
+        name = "#gamedev";
+        tag = "757dev";
+      }
+    );
+  };
+  11 = {
+    items = (
+      {
+        type = "CHANNEL";
+        chat_type = "IRC";
+        name = "#gaming";
+        tag = "757dev";
+      }
+    );
+  };
+  12 = {
+    items = (
+      {
+        type = "CHANNEL";
+        chat_type = "IRC";
+        name = "#python";
+        tag = "757dev";
+      }
+    );
+  };
+  13 = {
+    items = (
+      {
+        type = "CHANNEL";
+        chat_type = "IRC";
+        name = "#robotics-iot";
+        tag = "757dev";
+      }
+    );
+  };
+  14 = {
+    items = (
+      {
+        type = "CHANNEL";
+        chat_type = "IRC";
+        name = "#serverless";
+        tag = "757dev";
+      }
+    );
+  };
+  15 = {
+    items = (
+      {
+        type = "CHANNEL";
+        chat_type = "IRC";
+        name = "#vr-ar";
+        tag = "757dev";
+      }
+    );
+  };
+  16 = {
+    items = (
+      {
+        type = "CHANNEL";
+        chat_type = "IRC";
+        name = "#rogue-one-veterans";
+        tag = "757dev";
+      }
+    );
+  };
+  17 = {
+    items = (
+      {
+        type = "CHANNEL";
+        chat_type = "IRC";
+        name = "#wz";
+        tag = "757dev";
+      }
+    );
+  };
+};
+mainwindows = { 1 = { first_line = "0"; lines = "37"; }; };
