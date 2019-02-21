@@ -34,13 +34,13 @@ echo "Installing for os: $OS  version: $VER"
 
 if [ "$OS" == "Fedora" ]; then
     dnf install -y \
-        cmake gcc gcc-c++ git irssi mutt \
+        cmake gcc gcc-c++ git irssi jq mutt \
         python-devel python3-devel \
         sshfs the_silver_searcher tmux vim
 elif [ "$OS" == "Ubuntu" ]; then
     apt update
     apt install -y \
-        cmake g++ git mutt python-dev python3-dev \
+        cmake g++ git jq mutt python-dev python3-dev \
         sshfs the_silver_searcher tmux vim
 elif [ "$OS" == "OSX" ]; then
     echo "Note: unsure if the OS switch above works"
@@ -50,7 +50,7 @@ elif [ "$OS" == "OSX" ]; then
     # required before sshfs
     brew cask install osxfuse
     brew install vim-nox --with-override-system-vi
-    brew install cmake mutt pipenv pyenv python3 sshfs terraform vault
+    brew install cmake jq mutt pipenv pyenv python3 sshfs terraform vault
     brew cask install intellij-ce visual-studio-code firefox google-chrome
 else
     echo "Operating system: $OS not recognized :("
