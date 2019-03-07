@@ -54,9 +54,17 @@ ti() {
 }
 td() {
     tmux new-session -d bash
+    tmux send-keys 'vim .' Enter
     tmux split-window -v
-    tmux send-keys 'cd .' Enter
-    tmux resize-p -y 10
+    tmux resize-p -D 7
+    tmux select-pane -U
+    tmux -2 attach-session -d
+}
+tds() {
+    tmux new-session -d bash
+    tmux split-window -v
+    tmux resize-p -D 7
+    tmux select-pane -U
     tmux -2 attach-session -d
 }
 newsbeuterpurge() {
