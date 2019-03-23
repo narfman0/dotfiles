@@ -58,7 +58,7 @@ td() {
     tmux split-window -v
     tmux resize-p -D 7
     tmux select-pane -U
-    tmux send-keys 'sleep .3' Enter 'vim .' Enter
+    tmux send-keys 'sleep 1' Enter 'vim .' Enter
     tmux -2 attach-session -d
 }
 tds() {
