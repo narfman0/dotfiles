@@ -67,3 +67,7 @@ fi
 popd
 
 popd
+
+if [ -f ~/.bashrc ]; then
+  . ~/.bashrc
+fi
