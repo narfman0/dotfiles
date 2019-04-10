@@ -50,6 +50,9 @@ fi
 if [ ! -f ~/.vault-completion.bash ]; then
   curl https://raw.githubusercontent.com/narfman0/bash-it/master/completion/available/vault.completion.bash -o ~/.vault-completion.bash
 fi
+if [ ! -f ~/.pyenv-completion.bash ]; then
+  curl https://raw.githubusercontent.com/pyenv/pyenv/master/completions/pyenv.bash -o ~/.pyenv-completion.bash
+fi
 
 git config --global user.email "narfman0@gmail.com"
 git config --global user.name "Jon Robison"
