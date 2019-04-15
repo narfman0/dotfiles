@@ -54,10 +54,6 @@ if [ ! -f ~/.pyenv-completion.bash ]; then
   curl https://raw.githubusercontent.com/pyenv/pyenv/master/completions/pyenv.bash -o ~/.pyenv-completion.bash
 fi
 
-git config --global user.email "narfman0@gmail.com"
-git config --global user.name "Jon Robison"
-git config --global core.excludesfile ~/.gitignore_global
-
 echo "Installing vim plugins"
 vim -E -s -u "~/.vimrc" +PluginInstall +qall
 pushd .vim/bundle/YouCompleteMe

@@ -40,6 +40,7 @@ if [ -x "$(command -v trash)" ]; then
     alias rm='trash'
 fi
 
+# in case i forget to remove these from bash-it cp bash aliases
 alias cite='false'
 alias about-alias='false'
 

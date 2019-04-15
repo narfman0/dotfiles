@@ -1,6 +1,3 @@
-cite 'about-alias'
-about-alias 'terraform aliases'
-
 # Aliases
 alias tfcvfs='if [ -f "secrets.tfvars" ]; then echo "--var-file=secrets.tfvars"; fi'
 alias tfinit='terraform init $(tfcvfs)'

@@ -1,6 +1,3 @@
-cite 'about-alias'
-about-alias 'common git abbreviations'
-
 # Aliases
 alias gcl='git clone'
 alias ga='git add'
