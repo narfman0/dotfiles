@@ -1,4 +1,5 @@
 #!/bin/bash
+export DOTFILES_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 export CLICOLOR=1
 export EDITOR=vim
 export LSCOLORS=ExFxBxDxCxegedabagacad
@@ -36,18 +37,12 @@ if [ -x "$(command -v trash)" ]; then
     alias rm='trash'
 fi
 
-alias tfcvfs='if [ -f "secrets.tfvars" ]; then echo "--var-file=secrets.tfvars"; fi'
-alias tfci='if [ ! -d ".terraform" ]; then terraform init; fi'
-alias tfa='tfci; terraform apply $(tfcvfs)'
-alias tfaa='tfci; terraform apply -auto-approve $(tfcvfs)'
-alias tfd='tfci; terraform destroy $(tfcvfs)'
-alias tffu='tfci; terraform force-unlock $(tfcvfs)'
-alias tfinit='terraform init $(tfcvfs)'
-alias tfi='tfci; terraform import $(tfcvfs)'
-alias tfo='tfci; terraform output $(tfcvfs)'
-alias tfp='tfci; terraform plan $(tfcvfs)'
-alias tfs='tfci; terraform state $(tfcvfs)'
-alias tffmt='terraform fmt'
+alias cite='false'
+alias about-alias='false'
+
+for aliasFile in $DOTFILES_DIR/bash/aliases/*; do
+    . $aliasFile
+done
 
 #alias agr='ag "$1" --nogroup | awk '{print substr($1,1,index($1,":")-1);}' | xargs -I {} sed -i '.back' -e "s/$1/$2/g" {}'
 ti() {
@@ -84,4 +79,5 @@ function cd(){
 for cfile in ~/.*completion.bash; do
     . $cfile
 done
+
 complete -W "\`grep -oE '^[a-zA-Z0-9_.-]+:([^=]|$)' Makefile | sed 's/[^a-zA-Z0-9_.-]*$//'\`" make
