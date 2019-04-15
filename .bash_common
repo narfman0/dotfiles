@@ -33,6 +33,9 @@ alias genpass="openssl rand -base64 20"
 alias c='clear'
 alias ipe='curl ipinfo.io/ip'
 
+alias mvnd='mvn deploy'
+alias mvndst='mvnd -Dmaven.test.skip=true'
+
 if [ -x "$(command -v trash)" ]; then
     alias rm='trash'
 fi
