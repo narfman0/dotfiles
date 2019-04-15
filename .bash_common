@@ -8,65 +8,10 @@ export GOPATH=$HOME/go
 export PATH=$HOME/.local/bin:$HOME/bin:node_modules/.bin:$GOPATH/bin:$PATH
 export PS1="[\u@\h \w]$ "
 
-alias ll='ls -FGlAhp'
-alias rf='find . 2> /dev/null | grep'
-alias striphtml="sed 's|<[^>]*>||g'"
-alias pt='python -m unittest discover'
-alias ampc='cp $1 `grep UUID -A1 -a $1 | grep -io "[-A-Z0-9]\{36\}"`'
-alias beep='echo -e "\a"'
-alias t='task next'
-
-alias gr='git fetch; git rebase -i origin/master'
-alias grod='git fetch; git rebase -i origin/develop'
-alias gru='git fetch upstream; git rebase -i upstream/master'
-
-alias ta='tmux attach-session'
-alias tia='tmux attach-session -t irssi'
-alias tn='tmux new-session -s newsbeuter newsbeuter'
-alias tna='tmux attach-session -t newsbeuter'
-
-alias filebot='filebot.sh -rename --db TheTVDB -non-strict --format "{n} - {s00e00} - {t}"'
-alias filebotAnime='filebot.sh -rename --db anidb -non-strict --format "{n} - {s00e00} - {t}"'
-alias filebotTest='filebot.sh -rename --db TheTVDB -non-strict --format "{n} - {s00e00} - {t}" --action test'
-
-alias genpass="openssl rand -base64 20"
-alias c='clear'
-alias ipe='curl ipinfo.io/ip'
-
-alias mvnd='mvn deploy'
-alias mvndst='mvnd -Dmaven.test.skip=true'
-
-if [ -x "$(command -v trash)" ]; then
-    alias rm='trash'
-fi
-
-# in case i forget to remove these from bash-it cp bash aliases
-alias cite='false'
-alias about-alias='false'
-
 for aliasFile in $DOTFILES_DIR/bash/aliases/*; do
     . $aliasFile
 done
 
-#alias agr='ag "$1" --nogroup | awk '{print substr($1,1,index($1,":")-1);}' | xargs -I {} sed -i '.back' -e "s/$1/$2/g" {}'
-ti() {
-    tmux new-session -s irssi irssi
-}
-td() {
-    tmux new-session -d bash
-    tmux split-window -v
-    tmux resize-p -D 7
-    tmux select-pane -U
-    tmux send-keys 'sleep 1' Enter 'vim .' Enter
-    tmux -2 attach-session -d
-}
-tds() {
-    tmux new-session -d bash
-    tmux split-window -v
-    tmux resize-p -D 7
-    tmux select-pane -U
-    tmux -2 attach-session -d
-}
 newsbeuterpurge() {
     sqlite3 -line ~/.newsbeuter/cache.db "DELETE FROM rss_item WHERE unread = 1 AND pubDate < ( SELECT strftime('%s','now') - (10*86400));"
 }
