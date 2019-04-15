@@ -39,21 +39,6 @@ mkdir -p ~/.newsbeuter
 ln -fs $SCRIPTPATH/.newsbeuter/urls ~/.newsbeuter/
 ln -fs $SCRIPTPATH/.newsbeuter/config ~/.newsbeuter/
 
-if [ ! -f ~/.git-completion.bash ]; then
-  curl https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash -o ~/.git-completion.bash
-fi
-
-if [ ! -f ~/.tmux-completion.bash ]; then
-  curl https://raw.githubusercontent.com/narfman0/tmux-bash-completion/master/completions/tmux -o ~/.tmux-completion.bash
-fi
-
-if [ ! -f ~/.vault-completion.bash ]; then
-  curl https://raw.githubusercontent.com/narfman0/bash-it/master/completion/available/vault.completion.bash -o ~/.vault-completion.bash
-fi
-if [ ! -f ~/.pyenv-completion.bash ]; then
-  curl https://raw.githubusercontent.com/pyenv/pyenv/master/completions/pyenv.bash -o ~/.pyenv-completion.bash
-fi
-
 echo "Installing vim plugins"
 vim -E -s -u "~/.vimrc" +PluginInstall +qall
 pushd .vim/bundle/YouCompleteMe

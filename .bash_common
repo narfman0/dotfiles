@@ -8,10 +8,6 @@ export GOPATH=$HOME/go
 export PATH=$HOME/.local/bin:$HOME/bin:node_modules/.bin:$GOPATH/bin:$PATH
 export PS1="[\u@\h \w]$ "
 
-for aliasFile in $DOTFILES_DIR/bash/aliases/*; do
-    . $aliasFile
-done
-
 newsbeuterpurge() {
     sqlite3 -line ~/.newsbeuter/cache.db "DELETE FROM rss_item WHERE unread = 1 AND pubDate < ( SELECT strftime('%s','now') - (10*86400));"
 }
@@ -24,9 +20,10 @@ function cd(){
         . .env
     fi
 }
-# source all bash completions
-for cfile in ~/.*completion.bash; do
+
+for aliasFile in $DOTFILES_DIR/bash/aliases/*; do
+    . $aliasFile
+done
+for cfile in $DOTFILES_DIR/bash/completion/*; do
     . $cfile
 done
-
-complete -W "\`grep -oE '^[a-zA-Z0-9_.-]+:([^=]|$)' Makefile | sed 's/[^a-zA-Z0-9_.-]*$//'\`" make
