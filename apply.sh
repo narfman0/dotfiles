@@ -50,6 +50,8 @@ else
 fi
 popd
 
+curl -L https://github.com/pyenv/pyenv-installer/raw/master/bin/pyenv-installer | bash
+
 popd
 
 if [ -f ~/.bashrc ]; then

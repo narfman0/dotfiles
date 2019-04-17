@@ -5,8 +5,13 @@ export EDITOR=vim
 export LSCOLORS=ExFxBxDxCxegedabagacad
 export NSS_SSL_CBC_RANDOM_IV=0
 export GOPATH=$HOME/go
-export PATH=$HOME/.local/bin:$HOME/bin:node_modules/.bin:$GOPATH/bin:$PATH
 export PS1="[\u@\h \w]$ "
+export PATH=$HOME/.local/bin:$HOME/bin:node_modules/.bin:$GOPATH/bin:$PATH
+export PATH="$HOME/.pyenv/bin:$PATH"
+if [ -x "$(command -v pyenv)" ]; then
+    eval "$(pyenv init -)"
+    eval "$(pyenv virtualenv-init -)"
+fi
 
 newsbeuterpurge() {
     sqlite3 -line ~/.newsbeuter/cache.db "DELETE FROM rss_item WHERE unread = 1 AND pubDate < ( SELECT strftime('%s','now') - (10*86400));"
