@@ -35,13 +35,16 @@ echo "Installing for os: $OS  version: $VER"
 if [ "$OS" == "Fedora" ]; then
     dnf install -y \
         cmake gcc gcc-c++ git irssi jq mutt \
-        python-devel python3-devel \
+        python-devel python3-devel snapd \
         sshfs the_silver_searcher tmux vim
+    ln -s /var/lib/snapd/snap /usr/bin/snap
+    snap install spotify
 elif [ "$OS" == "Ubuntu" ]; then
     apt update
     apt install -y \
         cmake g++ git jq mutt python-dev python3-dev \
-        sshfs silversearcher-ag tmux vim
+        snapd sshfs silversearcher-ag tmux vim
+    snap install spotify
 elif [ "$OS" == "Darwin" ]; then
     if ! [ -x "$(command -v brew)" ]; then
         /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
@@ -50,7 +53,7 @@ elif [ "$OS" == "Darwin" ]; then
     brew cask install osxfuse
     brew install vim-nox --with-override-system-vi
     brew install cmake jq mutt pyenv sshfs terraform vault
-    brew cask install intellij-ce visual-studio-code firefox google-chrome spectacle
+    brew cask install intellij-ce visual-studio-code firefox google-chrome spectacle spotify
     echo "Please setup pyenv to install py3 and pipenv :)"
 else
     echo "Operating system: $OS not recognized :("
