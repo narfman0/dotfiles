@@ -21,6 +21,7 @@ alias ipe='curl ipinfo.io/ip'
 
 alias mvnd='mvn deploy'
 alias mvndst='mvnd -Dmaven.test.skip=true'
+alias mvnt='mvn test'
 
 # in case i forget to remove these from bash-it cp bash aliases
 alias cite='false'
