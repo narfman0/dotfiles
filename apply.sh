@@ -54,6 +54,4 @@ curl -L https://github.com/pyenv/pyenv-installer/raw/master/bin/pyenv-installer 
 
 popd
 
-if [ -f ~/.bashrc ]; then
-  . ~/.bashrc
-fi
+. ~/.bashrc

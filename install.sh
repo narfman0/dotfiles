@@ -42,7 +42,7 @@ if [ "$OS" == "Fedora" ]; then
 elif [ "$OS" == "Ubuntu" ]; then
     apt update
     apt install -y \
-        cmake g++ git jq mutt python-dev python3-dev \
+        cmake g++ git jq mutt python-dev python3-dev python3-pip python3-venv \
         snapd sshfs silversearcher-ag tmux vim
     snap install spotify
 elif [ "$OS" == "Darwin" ]; then
