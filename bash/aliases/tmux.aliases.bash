@@ -1,5 +1,6 @@
-alias ta='tmux attach-session'
+alias tas='tmux attach-session'
 alias tia='tmux attach-session -t irssi'
+alias tls='tmux list-sessions'
 alias tn='tmux new-session -s newsbeuter newsbeuter'
 alias tna='tmux attach-session -t newsbeuter'
 ti() {
