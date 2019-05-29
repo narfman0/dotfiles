@@ -34,15 +34,16 @@ echo "Installing for os: $OS  version: $VER"
 
 if [ "$OS" == "Fedora" ]; then
     dnf install -y \
-        cmake gcc gcc-c++ git irssi jq mutt \
-        python-devel python3-devel snapd \
-        sshfs the_silver_searcher tmux vim
+        cmake conky gcc gcc-c++ git irssi jq mutt \
+        python-devel python3-devel \
+        snapd sshfs the_silver_searcher tmux vim
     ln -s /var/lib/snapd/snap /usr/bin/snap
     snap install spotify
 elif [ "$OS" == "Ubuntu" ]; then
     apt update
     apt install -y \
-        cmake g++ git jq mutt python-dev python3-dev python3-pip python3-venv \
+        cmake conky g++ git jq mutt \
+        python-dev python3-dev python3-pip python3-venv \
         snapd sshfs silversearcher-ag tmux vim
     snap install spotify
 elif [ "$OS" == "Darwin" ]; then
