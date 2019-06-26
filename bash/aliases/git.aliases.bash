@@ -80,6 +80,7 @@ alias gstl="git stash list"
 alias gh='cd "$(git rev-parse --show-toplevel)"'
 # Show untracked files
 alias gu='git ls-files . --exclude-standard --others'
+alias gri='git rebase -i'
 
 case $OSTYPE in
   darwin*)
