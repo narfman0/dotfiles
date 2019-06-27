@@ -9,6 +9,8 @@ alias t='task next'
 alias grom='git fetch; git rebase -i origin/master'
 alias grod='git fetch; git rebase -i origin/develop'
 alias gru='git fetch upstream; git rebase -i upstream/master'
+alias gri='git rebase -i'
+alias grc='git rebase --continue'
 
 alias filebot='filebot.sh -rename --db TheTVDB -non-strict --format "{n} - {s00e00} - {t}"'
 alias filebotAnime='filebot.sh -rename --db anidb -non-strict --format "{n} - {s00e00} - {t}"'
