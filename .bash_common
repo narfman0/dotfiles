@@ -12,7 +12,6 @@ export PATH="$HOME/.pyenv/bin:$PATH"
 if [ -x "$(command -v pyenv)" ]; then
     eval "$(pyenv init -)"
 fi
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
 
 newsbeuterpurge() {
