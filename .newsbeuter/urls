@@ -2,6 +2,8 @@ http://feeds.feedburner.com/RockPaperShotgun "games"
 http://news.ycombinator.com/rss "hackernews"
 http://rss.slashdot.org/Slashdot/slashdot "slashdot"
 http://xkcd.com/rss.xml "xkcd"
+https://www.theguardian.com/us/environment/rss "theguardian environment"
+file:///home/narfman0/.newsbeuter/etc2.rss "fg"
 file:///home/narfman0/.newsbeuter/twitter_narfman0.atom
 file:///home/narfman0/.newsbeuter/github_narfman0.atom
 file:///home/narfman0/.newsbeuter/etc1.rss
