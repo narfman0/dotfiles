@@ -53,7 +53,7 @@ elif [ "$OS" == "Darwin" ]; then
     # required before sshfs
     brew cask install osxfuse
     brew install vim-nox --with-override-system-vi
-    brew install cmake jq mutt sshfs terraform vault
+    brew install cmake jq mutt sshfs terraform trash vault
     brew cask install intellij-idea-ce visual-studio-code firefox google-chrome spectacle spotify
 else
     echo "Operating system: $OS not recognized :("
