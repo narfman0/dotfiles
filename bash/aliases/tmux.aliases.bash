@@ -1,4 +1,5 @@
 alias tas='tmux attach-session'
+alias tks='tmux kill-session'
 alias tia='tmux attach-session -t irssi'
 alias tls='tmux list-sessions'
 alias tn='tmux new-session -s newsbeuter newsbeuter'
