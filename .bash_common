@@ -7,7 +7,7 @@ export NSS_SSL_CBC_RANDOM_IV=0
 export PS1="[\u@\h \w]$ "
 export GOPATH=$HOME/go
 export NVM_DIR="$HOME/.nvm"
-export PATH=$HOME/.local/bin:$HOME/bin:node_modules/.bin:$GOPATH/bin:$PATH
+export PATH=$HOME/.local/bin:$DOTFILES_DIR/bin:$HOME/bin:node_modules/.bin:$GOPATH/bin:$PATH
 export PATH="$HOME/.pyenv/bin:$PATH"
 if [ -x "$(command -v pyenv)" ]; then
     eval "$(pyenv init -)"

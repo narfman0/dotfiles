@@ -20,6 +20,8 @@ alias genpass="openssl rand -base64 20"
 alias c='clear'
 alias ipe='curl ipinfo.io/ip'
 #alias agr='ag "$1" --nogroup | awk '{print substr($1,1,index($1,":")-1);}' | xargs -I {} sed -i '.back' -e "s/$1/$2/g" {}'
+alias dice='dice.sh'
+alias roll='dice'
 
 alias mvnd='mvn deploy'
 alias mvndst='mvnd -Dmaven.test.skip=true'
