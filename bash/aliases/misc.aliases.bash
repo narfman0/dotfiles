@@ -5,6 +5,7 @@ alias pt='python -m unittest discover'
 alias ampc='cp $1 `grep UUID -A1 -a $1 | grep -io "[-A-Z0-9]\{36\}"`'
 alias beep='echo -e "\a"'
 alias t='task next'
+alias rustup-init='curl --proto '"'"'=https'"'"' --tlsv1.2 -sSf https://sh.rustup.rs | sh'
 
 alias grom='git fetch; git rebase -i origin/master'
 alias grod='git fetch; git rebase -i origin/develop'
