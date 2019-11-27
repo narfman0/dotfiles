@@ -1,8 +1,7 @@
-alias grom='gf; git rebase -i origin/master'
-alias grod='gf; git rebase -i origin/develop'
-alias grum='gf; git rebase -i upstream/master'
-alias grud='gf; git rebase -i upstream/develop'
-
 alias gri='git rebase -i'
+alias griom='gri origin/master'
+alias griod='gri origin/develop'
+alias grium='gri upstream/master'
+alias griud='gri upstream/develop'
 alias grc='git rebase --continue'
 alias grh='git reset --hard'
