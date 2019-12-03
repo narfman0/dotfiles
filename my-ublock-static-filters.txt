@@ -1,0 +1,7 @@
+! 10/22/2019 https://mint.intuit.com
+mint.intuit.com##.adviceWidget
+mint.intuit.com##.promotions-personalized-offers-ui-single-offer
+mint.intuit.com##.w2sWidget
+
+! 12/3/2019 https://en.wikipedia.org
+en.wikipedia.org###siteNotice
