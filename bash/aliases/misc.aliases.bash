@@ -1,5 +1,6 @@
+alias count='expr $(wc -l | tr -d '"'"'[:space:]'"'"') - 1'
 alias ll='ls -FGlAhp'
-alias lll='expr $(ll | wc -l | tr -d '"'"'[:space:]'"'"') - 1'
+alias lll='ll | count'
 alias rf='find . 2> /dev/null | grep'
 alias striphtml="sed 's|<[^>]*>||g'"
 alias pt='python -m unittest discover'
