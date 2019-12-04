@@ -6,7 +6,6 @@ alias striphtml="sed 's|<[^>]*>||g'"
 alias pt='python -m unittest discover'
 alias ampc='cp $1 `grep UUID -A1 -a $1 | grep -io "[-A-Z0-9]\{36\}"`'
 alias beep='echo -e "\a"'
-alias t='task'
 alias rustup-init='curl --proto '"'"'=https'"'"' --tlsv1.2 -sSf https://sh.rustup.rs | sh'
 
 alias genpass="openssl rand -base64 20"
