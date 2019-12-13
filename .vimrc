@@ -30,6 +30,9 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'hashivim/vim-terraform'
 Plugin 'fatih/vim-go'
 Plugin 'ambv/black'
+Plugin 'ngmy/vim-rubocop'
+Plugin 'vim-ruby/vim-ruby'
+Plugin 'tpope/vim-rails'
 Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 if iCanHazVundle == 0
     echo "Installing Bundles..."
@@ -133,6 +136,9 @@ au BufNewFile,BufRead *.js,*.html,*.css
     \ set tabstop=2 |
     \ set softtabstop=2 |
     \ set shiftwidth=2
+
+autocmd FileType ruby setlocal expandtab shiftwidth=2 tabstop=2
+autocmd FileType eruby setlocal expandtab shiftwidth=2 tabstop=2
 
 " Map Y to act like D and C, i.e. to yank until EOL, rather than act as yy,
 " which is the default
