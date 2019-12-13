@@ -19,9 +19,6 @@ fi
 if [ -f $HOME/.cargo/env ]; then
     source $HOME/.cargo/env
 fi
-if [ -f $HOME/.rvm/scripts/rvm ]; then
-    source $HOME/.rvm/scripts/rvm
-fi
 
 newsbeuterpurge() {
     sqlite3 -line ~/.newsbeuter/cache.db "DELETE FROM rss_item WHERE unread = 1 AND pubDate < ( SELECT strftime('%s','now') - (10*86400));"
