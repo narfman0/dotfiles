@@ -16,8 +16,6 @@ if [ -x "$(command -v pyenv)" ]; then
     eval "$(pyenv init -)"
 fi
 
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
-
 if [ -f $HOME/.cargo/env ]; then
     source $HOME/.cargo/env
 fi
