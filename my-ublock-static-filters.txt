@@ -5,3 +5,7 @@ mint.intuit.com##.w2sWidget
 
 ! 12/3/2019 https://en.wikipedia.org
 en.wikipedia.org###siteNotice
+
+! 1/6/2020 https://www.youtube.com
+www.youtube.com##ytd-primetime-promo-renderer
+
