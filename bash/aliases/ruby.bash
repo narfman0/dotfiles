@@ -1,3 +1,3 @@
-alias rcd='rubocop --display-cop-names'
-alias rcdac='rcd --auto-correct'
-alias rcdr='rcd --force-exclusion --display-style-guide --parallel'
+alias rc='rubocop --display-cop-names'
+alias rcac='rcd --auto-correct'
+alias rcr='rcd --force-exclusion --display-style-guide --parallel'
