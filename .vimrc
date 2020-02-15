@@ -18,12 +18,12 @@ endif
 set rtp+=~/.vim/bundle/vundle.vim
 call vundle#begin()
 Bundle 'gmarik/vundle'
-Bundle 'scrooloose/syntastic'
 Bundle 'scrooloose/nerdtree'
 Bundle 'Valloric/YouCompleteMe'
 Bundle 'ctrlpvim/ctrlp.vim'
 Plugin 'tmux-plugins/vim-tmux'
 "Plugin 'joonty/vdebug'
+Plugin 'dense-analysis/ale'
 Plugin 'jnurmine/Zenburn'
 Plugin 'narfman0/cscope_maps'
 Plugin 'tpope/vim-fugitive'
@@ -192,9 +192,6 @@ inoremap <C-v> <ESC>"+pa
 nnoremap <C-n> :set relativenumber!<cr>
 set relativenumber
 
-" enable/disable syntastic linting
-map <C-u> :SyntasticToggleMode<cr>
-
 set list
 " backup chars to play with: → ·
 set listchars=tab:>\ ,trail:·,nbsp:·
@@ -206,22 +203,6 @@ command! -nargs=+ HiLink hi def link <args>
 HiLink djangotagmarkers PreProc
 HiLink djangovariablemarkers PreProc
 delcommand HiLink
-
-" syntastic
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 0
-let g:syntastic_check_on_wq = 0
-
-let g:syntastic_javascript_checkers = ['jshint']
-let g:syntastic_python_checkers = ['pylint', 'flake8']
-let g:syntastic_python_pylint_args = "--load-plugins pylint_django --max-line-length=88 --disable=F0401"
-let g:syntastic_python_flake8_args="--max-line-length=88 --ignore=E203,E402,W503"
-let g:syntastic_ruby_checkers = ['mri', 'rubocop']
 
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
