@@ -204,11 +204,14 @@ HiLink djangotagmarkers PreProc
 HiLink djangovariablemarkers PreProc
 delcommand HiLink
 
-let g:ctrlp_map = '<c-p>'
-let g:ctrlp_cmd = 'CtrlP'
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip     " MacOSX/Linux
 set wildignore+=*\\tmp\\*,*.swp,*.zip,*.exe  " Windows
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_cmd = 'CtrlP'
 let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
+let g:ctrlp_max_files=0
+" fd seems to run faster, but requires native install
+" let g:ctrlp_user_command = 'fd --type f --color=never "" %s'
 
 " nerdtree
 autocmd StdinReadPre * let s:std_in=1
