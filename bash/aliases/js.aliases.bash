@@ -1,7 +1,7 @@
-nvmad='nvm alias default'
-nvmud='nvm use default'
-nvml='nvm list'
-nvmi='nvm install'
-nvmu='nvm use'
+alias nvmad='nvm alias default'
+alias nvmud='nvm use default'
+alias nvml='nvm list'
+alias nvmi='nvm install'
+alias nvmu='nvm use'
 
-yi='yarn install'
+alias yi='yarn install'
