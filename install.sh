@@ -1,4 +1,6 @@
 #!/bin/bash
+export SCRIPTPATH=$( cd $(dirname $0) ; pwd -P )
+
 echo "Determining OS version..."
 if [ -f /etc/os-release ]; then
     # freedesktop.org and systemd
@@ -58,3 +60,5 @@ elif [ "$OS" == "Darwin" ]; then
 else
     echo "Operating system: $OS not recognized :("
 fi
+
+$SCRIPTPATH/install-vscode-extensions.sh
