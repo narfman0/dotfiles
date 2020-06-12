@@ -1,5 +1,6 @@
 #!/bin/bash
 export DOTFILES_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
+export DOTFILES_ROOT=$DOTFILES_DIR
 export CLICOLOR=1
 export EDITOR=vim
 export LSCOLORS=ExFxBxDxCxegedabagacad
