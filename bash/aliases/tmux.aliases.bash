@@ -3,8 +3,9 @@ alias tsk='tmux kill-session'
 alias tsl='tmux list-sessions'
 alias tsn='tmux new-session'
 alias tsnn='tmux new-session -s newsbeuter newsbeuter'
-alias tsna='tmux attach-session -t newsbeuter'
+alias tsan='tmux attach-session -t newsbeuter'
 alias tsai='tmux attach-session -t irssi'
+alias tsa0='tmux attach-session -t 0'
 alias tsni='tmux new-session -s irssi irssi'
 tsnd() {
     tmux new-session -d bash
