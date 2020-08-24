@@ -21,3 +21,6 @@ alias ttnonwork="t -work"
 # shorthand
 alias ttw='ttwork'
 alias ttnw='ttnonwork'
+
+# other
+alias ttwa='ta +work'
