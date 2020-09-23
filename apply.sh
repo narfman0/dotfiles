@@ -16,6 +16,7 @@ ln -fs $SCRIPTPATH/.conkyrc
 
 mv .gitignore_global .gitignore_global.bak
 ln -fs $SCRIPTPATH/.gitignore_global
+git config pull.rebase false
 
 mkdir -p .tmux
 mv .tmux.conf .tmux.conf.old
