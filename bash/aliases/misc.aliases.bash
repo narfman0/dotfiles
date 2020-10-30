@@ -1,3 +1,4 @@
+alias cddf='cd $DOTFILES_ROOT'
 alias count='expr $(wc -l | tr -d '"'"'[:space:]'"'"') - 1'
 alias ll='ls -FGlAhp'
 alias lll='ll | count'
