@@ -22,11 +22,6 @@ mkdir -p .tmux
 mv .tmux.conf .tmux.conf.old
 ln -fs $SCRIPTPATH/.tmux.conf
 
-if [ -z "$ZNC_PASS" ]; then
-  echo -n "What is your ZNC password (for irssi)? "
-  read -s ZNC_PASS
-  echo "export ZNC_PASS=$ZNC_PASS" >> ~/.bashrc
-fi
 rm -rf ~/.irssi.old
 mv ~/.irssi ~/.irssi.old
 mkdir -p ~/.irssi
