@@ -10,6 +10,13 @@ alias beep='echo -e "\a"'
 alias rustup-init='curl --proto '"'"'=https'"'"' --tlsv1.2 -sSf https://sh.rustup.rs | sh'
 alias cte='crontab -e'
 alias agq='ag -q'
+wex(){
+    while :
+    do
+        $@
+        sleep 1
+    done
+}
 
 alias genpass="openssl rand -base64 20"
 alias c='clear'
