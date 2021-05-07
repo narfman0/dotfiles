@@ -1,3 +1,4 @@
 --exclude=*/build/*
---exclude=*/.venv/*
+--exclude=.venv
+--exclude=*/.venv
 --python-kinds=-i
