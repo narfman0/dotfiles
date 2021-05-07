@@ -166,7 +166,7 @@ nnoremap <space> za
 autocmd! bufwritepost .vimrc source %
 
 " set ctags paths
-set tags=./tags,tags
+set tags=./tags,tags,.tags
 set nocscopeverbose
 map <F5> :!pycscope -R<CR>
   \:cs add cscope.out<CR>

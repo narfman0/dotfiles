@@ -35,6 +35,8 @@ mkdir -p ~/.newsbeuter
 ln -fs $SCRIPTPATH/.newsbeuter/urls ~/.newsbeuter/
 ln -fs $SCRIPTPATH/.newsbeuter/config ~/.newsbeuter/
 
+ln -fs $SCRIPTPATH/.ctags
+
 echo "Installing vim plugins"
 vim -E -s -u "~/.vimrc" +PluginInstall +qall
 pushd .vim/bundle/YouCompleteMe
