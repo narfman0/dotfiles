@@ -24,22 +24,6 @@ if [ -f $HOME/.cargo/env ]; then
     source $HOME/.cargo/env
 fi
 
-newsbeuterpurge() {
-    sqlite3 -line ~/.newsbeuter/cache.db "DELETE FROM rss_item WHERE unread = 1 AND pubDate < ( SELECT strftime('%s','now') - (10*86400));"
-}
-osxaslclean() {
-    sudo mv /private/var/log/asl/*.asl ~/.Trash
-}
-function cd(){
-    builtin cd "${*}"
-    if [ -e ".env" ]; then
-        . .env
-    fi
-}
-
-for aliasFile in $DOTFILES_DIR/bash/aliases/*; do
-    . $aliasFile
-done
-for cfile in $DOTFILES_DIR/bash/completion/*; do
-    . $cfile
+for file in $DOTFILES_DIR/bash/*/*; do
+    . $file
 done
