@@ -1,0 +1,5 @@
+#!/bin/sh
+echo "Updating containers for docker-compose"
+docker-compose down
+docker-compose up --force-recreate --build -d
+docker image prune -f

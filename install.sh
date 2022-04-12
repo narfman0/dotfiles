@@ -61,4 +61,4 @@ else
     echo "Operating system: $OS not recognized :("
 fi
 
-$SCRIPTPATH/install-vscode-extensions.sh
+$SCRIPTPATH/bin/install-vscode-extensions.sh
