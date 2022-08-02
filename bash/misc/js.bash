@@ -1,6 +1,6 @@
-declare -a NODE_GLOBALS=($(find $NVM_DIR/versions/node -maxdepth 3 -type l -wholename '*/bin/*' | xargs -n1 basename | sort | uniq))
-NODE_GLOBALS+=("node")
-NODE_GLOBALS+=("nvm")
+# declare -a NODE_GLOBALS=($(find $NVM_DIR/versions/node -maxdepth 3 -type l -wholename '*/bin/*' | xargs -n1 basename | sort | uniq))
+# NODE_GLOBALS+=("node")
+# NODE_GLOBALS+=("nvm")
 
 load_nvm () {
     export NVM_DIR=~/.nvm
