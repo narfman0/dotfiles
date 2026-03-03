@@ -32,8 +32,8 @@ else
 fi
 popd
 
-[ ! -d "$HOME/.pyenv" ] && curl -L https://github.com/pyenv/pyenv-installer/raw/master/bin/pyenv-installer | bash
-[ ! -d "$HOME/.poetry" ] && curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python
+#[ ! -d "$HOME/.pyenv" ] && curl -L https://github.com/pyenv/pyenv-installer/raw/master/bin/pyenv-installer | bash
+#[ ! -d "$HOME/.poetry" ] && curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python
 #[ ! -d "$HOME/.nvm" ] && curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/master/install.sh | bash
 
 # ruby
