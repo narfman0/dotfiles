@@ -13,23 +13,13 @@ mkdir -p .vim/colors
 
 mv .gitignore_global .gitignore_global.bak
 ln -fs $SCRIPTPATH/.gitignore_global
-git config pull.rebase false
 
 mkdir -p .tmux
 mv .tmux.conf .tmux.conf.old
 ln -fs $SCRIPTPATH/.tmux.conf
 
-ln -fs $SCRIPTPATH/.ctags
+#ln -fs $SCRIPTPATH/.ctags
 
-echo "Installing vim plugins"
-vim -E -s -u "~/.vimrc" +PluginInstall +qall
-pushd .vim/bundle/YouCompleteMe
-if [ ! -e "third_party/ycmd/ycm_core.so" ]; then
-    echo "YCM not compiled, compiling"
-    ./install.py
-else
-    echo "YCM already compiling, skipping"
-fi
 popd
 
 #[ ! -d "$HOME/.pyenv" ] && curl -L https://github.com/pyenv/pyenv-installer/raw/master/bin/pyenv-installer | bash
