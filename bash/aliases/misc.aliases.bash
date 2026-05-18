@@ -10,6 +10,9 @@ alias beep='echo -e "\a"'
 alias rustup-init='curl --proto '"'"'=https'"'"' --tlsv1.2 -sSf https://sh.rustup.rs | sh'
 alias cte='crontab -e'
 alias agq='ag -q'
+alias vim='nvim'
+alias vimb='vim ~/.bashrc'
+alias vimbs='vim ~/.bashrc && source ~/.bashrc'
 wex(){
     while :
     do
@@ -24,10 +27,6 @@ alias ipe='curl ipinfo.io/ip'
 #alias agr='ag "$1" --nogroup | awk '{print substr($1,1,index($1,":")-1);}' | xargs -I {} sed -i '.back' -e "s/$1/$2/g" {}'
 alias dice='dice.sh'
 alias roll='dice'
-
-# in case i forget to remove these from bash-it cp bash aliases
-alias cite='false'
-alias about-alias='false'
 
 if [ -x "$(command -v trash)" ]; then
     alias rm='trash'
