@@ -1,9 +1,3 @@
-newsbeuterpurge() {
-    sqlite3 -line ~/.newsbeuter/cache.db "DELETE FROM rss_item WHERE unread = 1 AND pubDate < ( SELECT strftime('%s','now') - (10*86400));"
-}
-osxaslclean() {
-    sudo mv /private/var/log/asl/*.asl ~/.Trash
-}
 pythoninit() {
     echo "Installing vim plugins"
     vim -E -s -u "~/.vimrc" +PluginInstall +qall
@@ -20,4 +14,8 @@ function cd(){
     if [ -e ".env" ]; then
         . .env
     fi
+}
+load_nvm () {
+    export NVM_DIR=~/.nvm
+    [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
 }

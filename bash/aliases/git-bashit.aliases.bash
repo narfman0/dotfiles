@@ -14,11 +14,10 @@ alias gclean='git clean -fd'
 alias gm="git merge"
 alias gmv='git mv'
 alias g='git'
-alias get='git'
 alias gs='git status'
 alias gss='git status -s'
 alias gsu='git submodule update --init --recursive'
-alias gl='git pull'
+alias gpl='git pull'
 alias glum='git pull upstream master'
 alias gpr='git pull --rebase'
 alias gpp='git pull && git push'
@@ -77,15 +76,3 @@ alias gst="git stash"
 alias gstb="git stash branch"
 alias gstd="git stash drop"
 alias gstl="git stash list"
-alias gh='cd "$(git rev-parse --show-toplevel)"'
-# Show untracked files
-alias gu='git ls-files . --exclude-standard --others'
-
-case $OSTYPE in
-  darwin*)
-    alias gtls="git tag -l | gsort -V"
-    ;;
-  *)
-    alias gtls='git tag -l | sort -V'
-    ;;
-esac
