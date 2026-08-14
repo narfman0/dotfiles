@@ -10,6 +10,10 @@ alias cte='crontab -e'
 alias agq='ag -q'
 alias vim='nvim'
 alias vimb='vim ~/.bashrc && source ~/.bashrc'
+vims(){
+  nvim "$@"
+  source "$@"
+}
 alias cdw='cd ~/workspace'
 wex(){
   while :
