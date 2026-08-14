@@ -36,29 +36,14 @@ echo "Installing for os: $OS  version: $VER"
 
 if [ "$OS" == "Fedora" ]; then
     dnf install -y \
-        cmake conky gcc gcc-c++ git irssi jq mutt \
-        python-devel python3-devel \
-        snapd sshfs the_silver_searcher tmux vim
-    ln -s /var/lib/snapd/snap /usr/bin/snap
-    snap install spotify
+        cmake gcc gcc-c++ git jq mutt the_silver_searcher tmux vim
 elif [ "$OS" == "Ubuntu" ]; then
     apt update
     apt install -y \
-        cmake conky g++ git jq mutt \
-        python-dev python3-dev python3-pip python3-venv \
-        snapd sshfs silversearcher-ag tmux vim
-    snap install spotify
+        cmake g++ git jq mutt silversearcher-ag tmux vim
 elif [ "$OS" == "Darwin" ]; then
-    if ! [ -x "$(command -v brew)" ]; then
-        /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-    fi
-    # required before sshfs
-    brew cask install osxfuse
-    brew install vim-nox --with-override-system-vi
-    brew install cmake fzf jq lastpass-cli mutt sshfs terraform the_silver_searcher task tmux trash vault
-    brew cask install intellij-idea-ce visual-studio-code firefox iterm2 google-chrome spectacle spotify
+    brew install cmake fzf jq mutt the_silver_searcher tmux trash vault
+    brew cask install firefox iterm2 google-chrome spotify
 else
     echo "Operating system: $OS not recognized :("
 fi
-
-$SCRIPTPATH/bin/install-vscode-extensions.sh
