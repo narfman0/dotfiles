@@ -37,4 +37,4 @@ claude-temp() {
     # Note: When you exit, Claude will natively prompt you to delete the folder.
     claude --worktree "$wt_name"
 }
-
+alias ct='claude-temp'
