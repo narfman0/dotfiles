@@ -34,9 +34,6 @@ dfcpo() {
   git push origin
   popd
 }
-cddf() {
-  cd $DOTFILES_ROOT
-}
 
 alias ct='claude-temp'
 alias cdfp='cd ~/workspace/fullpod'
