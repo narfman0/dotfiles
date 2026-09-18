@@ -34,6 +34,15 @@ dfcpo() {
   git push origin
   popd
 }
+cddf() {
+  cd $DOTFILES_ROOT
+}
+
+alias ct='claude-temp'
+alias cdfp='cd ~/workspace/fullpod'
+alias cfp='cdfp && ct'
+alias cdmtg='cd ~/workspace/mtg'
+alias cmtg='cdmtg && ct'
 
 if [ -x "$(command -v trash)" ]; then
     alias rm='trash'
