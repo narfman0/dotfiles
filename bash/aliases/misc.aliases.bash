@@ -40,6 +40,8 @@ alias cdfp='cd ~/workspace/fullpod'
 alias cfp='cdfp && ct'
 alias cdmtg='cd ~/workspace/mtg'
 alias cmtg='cdmtg && ct'
+alias cdmint='cd ~/workspace/mint'
+alias cmint='cdmint && ct'
 
 if [ -x "$(command -v trash)" ]; then
     alias rm='trash'
